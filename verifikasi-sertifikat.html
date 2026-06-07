@@ -136,12 +136,9 @@
     });
     </script>
     <script type="text/javascript">
-    // Database sertifikat lokal
-    var sertifikatDB = {
-        "01.026/DO-UPDME-SER/IV/2026/LRCKG6742": "verifikasi-sertifikat/120697b1e6807dc01769676392WZ6SF6742.html",
-        "13.003/ED-NSPPA/II/2026/XEA4U765":      "verifikasi-sertifikat/121699fae3cd41161772072508AJW7Y765.html",
-        "13.003/ED-NSPAK/IV/2026/YL0T910140":    "verifikasi-sertifikat/12269d79d89eae121775738249ZYDCV10140.html"
-    };
+    // Redirect ke clean URL
+    window.location.replace('/verifikasi-sertifikat');
+    var sertifikatDB = {};
 
     $(document).ready(function() {
         function cariSertifikat() {

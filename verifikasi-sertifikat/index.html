@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasa.id - Verifikasi Sertifikat</title>
+    <link rel="icon" type="image/svg+xml" href="https://edukasa.id/img/assets/icons/edukasa-favicon.png">
+    <link href="../assets/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css2.css" rel="stylesheet">
+    <link href="../assets/all.min.css" rel="stylesheet">
+    <link href="../assets/jquery-ui.css" rel="stylesheet">
+    <link href="../assets/style.css" rel="stylesheet">
+    <link href="../assets/mobile-style.css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(250, 250, 250);">
+
+    <div class="header-wrapper" style="zoom: 0.9">
+        <header class="header d-flex justify-content-between align-items-center">
+            <a href="/" class="navigation text-decoration-none text-dark">
+                <h4><i class="fas fa-arrow-left"></i> Verifikasi Sertifikat</h4>
+            </a>
+        </header>
+    </div>
+
+    <div class="container" style="zoom: 0.9">
+        <main class="cari-sertifikat">
+            <section class="search">
+                <img src="../assets/certificate.svg" alt="cari sertifikat">
+                <h3>Masukkan Nomor Sertifikat</h3>
+                <div class="search-bar">
+                    <input type="text" class="form-control" id="keyword-search" placeholder="Masukkan nomor sertifikat">
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+                <button id="btn-search" class="btn btn-info">Cari</button>
+            </section>
+            <section class="list-sertifikat" id="load-content"></section>
+        </main>
+
+        <footer class="footer">
+            <p>Ikuti juga update terbaru <br>melalui akun sosial media kami</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/edukasa.id" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/diklat-online" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Edukasa-id" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/edukasaid" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="hubungi-kami d-flex" id="hubungi-kami-content">
+                <div>
+                    <h6><i class="fa-regular fa-map"></i>&nbsp; Lokasi</h6>
+                    <span><b>PT Sumber Belajar Bersama</b></span><br>
+                    <span>Grogolan, Rejoslamet, <br>Kec. Mojowarno, Kabupaten Jombang, <br>Jawa Timur 61475</span>
+                </div>
+                <hr>
+                <div>
+                    <h6><i class="fa-solid fa-headset"></i>&nbsp; Kontak</h6>
+                    <span>Email : edukasa.id@gmail.com</span><br>
+                    <span>Phone : 085190851001</span>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2022 &copy; Edukasa.id. All Right Reserved.</p>
+        </footer>
+
+        <nav class="navbar navbar-expand fixed-bottom bottom-nav">
+            <div class="container">
+                <a class="nav-link" href="/"><i class="fas fa-home"></i> Beranda</a>
+                <a class="nav-link" href="https://edukasa.id/kelas-mandiri"><i class="fa-solid fa-tv"></i> Mandiri</a>
+                <a class="nav-link" href="https://edukasa.id/kelas-live"><i class="fa-solid fa-wifi"></i> Live</a>
+                <a class="nav-link" href="https://edukasa.id/bacaan"><i class="fa-regular fa-file-lines"></i> Bacaan</a>
+                <a class="nav-link" href="/"><i class="fa-regular fa-user"></i> Daftar</a>
+            </div>
+        </nav>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=6285190851001" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="../assets/jquery-3.6.0.min.js"></script>
+    <script src="../assets/bootstrap.bundle.min.js"></script>
+    <script src="../assets/sweetalert2.min.js"></script>
+
+    <script>
+    // ============================================================
+    // DATABASE SERTIFIKAT (hardcoded)
+    // ============================================================
+    var DB = {
+        "01.026/DO-UPDME-SER/IV/2026/LRCKG6742": {
+            hash: "120697b1e6807dc01769676392WZ6SF6742",
+            noSertifikat: "01.026/DO-UPDME-SER/IV/2026/LRCKG6742",
+            kelas: "Pelatihan Nasional Penulisan Publikasi Ilmiah dan Manajemen Data untuk Pemula",
+            kelasUrl: "https://edukasa.id/kelas-live/120/pelatihan-nasional-penulisan-publikasi-ilmiah-dan-manajemen-data-untuk-pemula",
+            nama: "Muhammad Awal Nur, M.Pd",
+            nip: "198810242023211011",
+            nuptk: "-",
+            nidn: "0924108802",
+            instansi: "Universitas Negeri Makassar"
+        },
+        "13.003/ED-NSPPA/II/2026/XEA4U765": {
+            hash: "121699fae3cd41161772072508AJW7Y765",
+            noSertifikat: "13.003/ED-NSPPA/II/2026/XEA4U765",
+            kelas: "Pelatihan Nasional Pengenalan dan Pemanfaatan Artificial Intelligence (AI) di Era Digital",
+            kelasUrl: "https://edukasa.id/kelas-live/121/pelatihan-nasional-pengenalan-dan-pemanfaatan-artificial-intelligence-ai-di-era-digital",
+            nama: "Muhammad Awal Nur, M.Pd",
+            nip: "198810242023211011",
+            nuptk: "-",
+            nidn: "0924108802",
+            instansi: "UNM"
+        },
+        "13.003/ED-NSPAK/IV/2026/YL0T910140": {
+            hash: "12269d79d89eae121775738249ZYDCV10140",
+            noSertifikat: "13.003/ED-NSPAK/IV/2026/YL0T910140",
+            kelas: "Pelatihan Nasional Teknik Prompt AI untuk Mendukung Pekerjaan Harian: Penulisan, Analisis dan Kreativitas",
+            kelasUrl: "https://edukasa.id/kelas-live/122/pelatihan-nasional-pengenalan-dan-pemanfaatan-artificial-intelligence-ai-di-era-digital1773013927gt1se",
+            nama: "Muhammad Awal Nur, M.Pd",
+            nip: "-",
+            nuptk: "-",
+            nidn: "0924108802",
+            instansi: "Universitas Negeri Makassar"
+        }
+    };
+
+    // Mapping hash -> nomor sertifikat (untuk lookup via URL path)
+    var DB_BY_HASH = {};
+    Object.keys(DB).forEach(function(no) {
+        DB_BY_HASH[DB[no].hash] = DB[no];
+    });
+
+    // ============================================================
+    // RENDER HASIL SERTIFIKAT
+    // ============================================================
+    function renderHasil(data) {
+        return `
+        <div class="cari-sertifikat-content">
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">No. Sertifikat</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.noSertifikat}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">Kelas</div>
+                <div class="col-md-10 col-sm-12 info-value">
+                    <span class="info-kelas">
+                        <a href="${data.kelasUrl}">${data.kelas}</a>
+                    </span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">Status</div>
+                <div class="col-md-10 col-sm-12 info-value">
+                    <span class="badge bg-success">
+                        <i class="fa-solid fa-circle-check"></i> Terverifikasi
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">Nama</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.nama}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">NIP/NIPPK</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.nip}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">NUPTK</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.nuptk}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">NIDN</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.nidn}</div>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-12 info-name">Instansi</div>
+                <div class="col-md-10 col-sm-12 info-value">${data.instansi}</div>
+            </div>
+            <div class="unduh-sertifikat row">
+                <div class="col-6">
+                    <a class="btn btn-outline-success w-100"
+                       href="https://edukasa.id/sertifikat/${data.hash}" target="_blank">
+                        <span>Unduh Sertifikat <i class="fa-solid fa-award ms-1"></i></span><br>
+                        <small style="font-size:0.75rem;opacity:0.9;">(Tanpa Nilai)</small>
+                    </a>
+                </div>
+                <div class="col-6">
+                    <a class="btn btn-outline-primary w-100"
+                       href="https://edukasa.id/sertifikat/${data.hash}/with-score" target="_blank">
+                        <span>Unduh Sertifikat <i class="fa-solid fa-award ms-1"></i></span><br>
+                        <small style="font-size:0.75rem;opacity:0.9;">(Tampilkan Nilai)</small>
+                    </a>
+                </div>
+            </div>
+        </div>`;
+    }
+
+    function renderTidakDitemukan(nomor) {
+        return `
+        <div class="cari-sertifikat-content text-center py-4">
+            <i class="fa-solid fa-circle-xmark text-danger" style="font-size:3rem"></i>
+            <h5 class="mt-3">Sertifikat Tidak Ditemukan</h5>
+            <p class="text-muted">Nomor sertifikat <strong>${nomor}</strong> tidak ditemukan dalam sistem kami.</p>
+        </div>`;
+    }
+
+    // ============================================================
+    // CEK URL PATH — jika /verifikasi-sertifikat/<hash>, tampilkan langsung
+    // ============================================================
+    $(document).ready(function() {
+        var path = window.location.pathname;
+        // Ambil segment terakhir setelah /verifikasi-sertifikat/
+        var segments = path.replace(/\/$/, '').split('/');
+        var hash = segments[segments.length - 1];
+
+        // Kalau ada hash di URL (bukan "verifikasi-sertifikat" itu sendiri)
+        if (hash && hash !== 'verifikasi-sertifikat' && DB_BY_HASH[hash]) {
+            var data = DB_BY_HASH[hash];
+            // Isi kolom pencarian dengan nomor sertifikat
+            $('#keyword-search').val(data.noSertifikat);
+            // Tampilkan hasil langsung
+            $('#load-content').html(renderHasil(data));
+        }
+
+        // ============================================================
+        // TOMBOL CARI
+        // ============================================================
+        function cariSertifikat() {
+            var nomor = $('#keyword-search').val().trim();
+            if (!nomor) return false;
+
+            $('#load-content').html(
+                '<div class="loading-container">' +
+                '<div class="spinner-border text-primary" role="status"></div>' +
+                '<span class="ms-2"> Mencari data sertifikat...</span>' +
+                '</div>'
+            );
+
+            setTimeout(function() {
+                var data = DB[nomor];
+                if (data) {
+                    // Update URL ke clean URL tanpa reload halaman
+                    history.pushState(null, '', '/verifikasi-sertifikat/' + data.hash);
+                    $('#load-content').html(renderHasil(data));
+                } else {
+                    history.pushState(null, '', '/verifikasi-sertifikat');
+                    $('#load-content').html(renderTidakDitemukan(nomor));
+                }
+            }, 600);
+
+            return false;
+        }
+
+        $('#btn-search').click(function() { return cariSertifikat(); });
+        $('#keyword-search').on('keypress', function(e) {
+            if (e.which === 13) return cariSertifikat();
+        });
+    });
+    </script>
+</body>
+</html>

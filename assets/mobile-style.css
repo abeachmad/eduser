@@ -1,0 +1,501 @@
+@media screen and (max-width: 575px) {
+    h4 {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+    }
+    h5 {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 21px;
+    }
+    .container {
+        padding: 45px 0 86px 0;
+    }
+    .badge {
+        font-size: 10px;
+    }
+    .nav-link {
+        padding: 8px 12px;
+        margin: 0 12px 8px 0;
+    }
+    .darkmode .fa-sun {
+        color: #7F808E;
+    }
+    .page-item a {
+        font-size: 14px;
+    }
+    .page-item.active .page-link, .page-item.active .page-link {
+        font-size: 14px;
+    }
+
+    .header {
+        padding: 12px 16px;
+    }
+
+    .announcement .carousel-indicators [data-bs-target] {
+        width: 4px;
+        height: 4px;
+        border-radius: 100%;
+    }
+    .announcement .carousel-item img {
+        /* height: 115px; */
+        height: auto;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .main-menu .menu-item{
+        margin-bottom: 12px;
+    }
+
+    .bottom-nav .container {
+        padding: 14px;
+    }
+    .bottom-nav a {
+        color: #7F808E;
+        text-decoration: none;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    .bottom-nav i {
+        font-size: 16px;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .footer {
+        padding: 24px 16px;
+        margin: 16px;
+    }
+    footer .social-icons a {
+        font-size: 28px;
+    }
+    .footer .hubungi-kami {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+        margin: 16px 0;
+    }
+    .footer .hubungi-kami div {
+        width: 100%;
+    }
+    .footer .hubungi-kami hr {
+        width: 100%;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 80px;
+        right: 10px;
+        font-size: 24px;
+    }
+
+    .kelas-unggulan .class-card img {
+        width: 130px;
+        height: 130px;
+    }
+    .kelas-unggulan .class-info {
+        height: 130px;
+        padding: 9.5px 8px;
+    }
+    .kelas-unggulan .class-info h5 {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+    }
+
+    .join-telegram {
+        display: block;
+    }
+    .join-whatsapp {
+        display: block;
+    }
+    
+    .category-buttons {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; /* Untuk Firefox */
+        white-space: nowrap;
+    }
+    .category-buttons::-webkit-scrollbar {
+        display: none; /* Untuk Chrome, Safari, dan Opera */
+    }
+    .category-buttons .nav {
+        flex-wrap: wrap;
+    }
+
+    .category-buttons .nav-link {
+        white-space: nowrap;
+    }
+
+    .semua-kelas .category-buttons .nav {
+        flex-wrap: nowrap;
+    }
+
+    .article .category-buttons .nav {
+        flex-wrap: nowrap;
+    }
+
+    .search-bar {
+        padding: 16px 0;
+    }
+    .semua-kelas .class-card {
+        display: flex;
+        box-shadow: 0px 12px 54px 0px #0B86AF1F;
+    }
+    .semua-kelas .class-card img {
+        width: 130px;
+        height: 130px;
+    }
+    .semua-kelas .class-info {
+        height: 130px;
+        padding: 9.5px 8px;
+    }
+    .semua-kelas .class-info h5 {
+        display: -webkit-box; /* For WebKit browsers (Chrome, Safari) */
+        -webkit-box-orient: vertical; /* For WebKit browsers (Chrome, Safari) */
+        -webkit-line-clamp: 3; /* For WebKit browsers (Chrome, Safari) */
+        display: -moz-box; /* For Firefox (not fully supported) */
+        -moz-box-orient: vertical; /* For Firefox (not fully supported) */
+        display: -ms-flexbox; /* For Internet Explorer */
+        -ms-flex-orient: vertical; /* For Internet Explorer */
+        display: box; /* For older versions of Internet Explorer */
+        box-orient: vertical; /* For older versions of Internet Explorer */
+        line-clamp: 3; /* Standard property */
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 100%;
+        margin-bottom: 8px;
+        min-height: auto;
+    }
+    .semua-kelas .class-card .image-wrapper .badge {
+        top: 6px;
+        right: 6px;
+    }
+    .semua-kelas .btn-lihat-kelas {
+        display: none;
+    }
+    .semua-kelas .class-info .date {
+        padding: 0;
+    }
+
+    .kelas-mandiri .class-title h4 {
+        padding: 12px 0;
+    }
+    .kelas-mandiri .class-title .star-rating {
+        padding-bottom: 12px;
+    }
+    .kelas-mandiri .class-title .class-card {
+        display: flex;
+        background-color: white;
+        display: block;
+    }
+    .kelas-mandiri .class-title .class-card img {
+        width: 232px;
+        height: 232px;
+        border-radius: 10.82px;
+    }
+    .kelas-mandiri .class-title .class-card-link {
+        text-decoration: none;
+        color: inherit;
+    }
+    .kelas-mandiri .class-title .class-card .image-wrapper {
+        position: relative;
+    }
+    .kelas-mandiri .class-title .class-card .image-wrapper .badge {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        z-index: 1;
+        font-size: 10px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section {
+        margin-bottom: 12px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section h5 {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section span {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        margin-bottom: 4px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .pembicara{
+        margin-bottom: 2px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .pembicara img{
+        width: 40px;
+        height: 40px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .pembicara span{
+        margin-left: 8px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .pembicara .nama{
+        font-weight: 500;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .pembicara .job{
+        font-weight: 400px;
+        color: #7F808E;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .live-from {
+        color: #7F808E;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .fa-video {
+        color: #2196F3;
+    }
+    .kelas-mandiri .class-title .class-card .class-info .class-info-section .fa-youtube {
+        color: #FF0000;
+        margin-left: 12px;
+    }
+
+    .kelas-mandiri .class-video .class-video-iframe {
+        border-radius: 12px;
+    }
+
+    .kelas-mandiri #detail-kelas .class-card {
+        display: flex;
+        flex-direction: column;
+    }
+    .kelas-mandiri #detail-kelas .class-card .image-wrapper img {
+        width: 100%;
+        height: auto;
+        border-radius: 16px;
+        margin-bottom: 24px;
+    }
+    .kelas-mandiri #detail-kelas .class-card .class-info {
+        margin-left: 0;
+    }
+
+    .kelas-mandiri #profil-pengajar .detail-pengajar {
+        display: block;
+    }
+
+    .kelas-mandiri #ulasan .card {
+        border: none;
+        box-shadow: 0px 12px 54px 0px #0B86AF0F;
+    }
+    .kelas-mandiri #ulasan .ulasan-progressbar {
+        display: block;
+        padding: 0 12px 12px 12px;
+    }
+    .kelas-mandiri #ulasan .ulasan-progressbar .progress {
+        height: 4px;
+        margin-bottom: 12px;
+        width: 80%;
+    }
+    .kelas-mandiri #ulasan .ulasan-progressbar .progressbar-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .kelas-mandiri #ulasan .ulasan-progressbar .progress-bar-star span {
+        color: #FABC09;
+        font-size: 18px;
+    }
+
+    .info-nilai-kelulusan {
+        display: inline-block;
+    }
+
+    .detail-kelas-live #deskripsi .wrapper .btn-warning {
+        background-color: #FABC09;
+        border-radius: 12px;
+        border: 1.5px solid #FABC09;
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 500;
+        text-align: center;
+        width: 100%;
+        padding: 12px 24px;
+    }
+
+    .form-kelas-live .user-form {
+        padding: 18px;
+    }
+
+    .form-kelas-live .user-form .form-label {
+        font-size: 18px;
+        margin-bottom: 6px;
+    }
+    
+    .form-kelas-live .user-form .form-text {
+        font-size: 14px;
+    }
+
+    .article .class-info h5 {
+        min-height: 0px;
+    }
+
+    .list-article .class-info h5 {
+        margin-top: 12px;
+    }
+    .list-article .class-card {
+        display: block;
+        box-shadow: 0px 12px 54px 0px #0B86AF1F;
+    }
+    .detail-article .related-articles {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .detail-article .postingan h3 {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25.2px;
+    }
+    .detail-article .postingan .share-button {
+        margin: 4px 0 8px 0;
+    }
+    .detail-article .postingan .share-button a {
+        margin-right: 4px;
+    }
+    .detail-article .postingan .share-text {
+        margin-right: 4px;
+    }
+    .detail-article .related-articles {
+        display: flex;
+        flex-direction: column;
+    }
+    .detail-article .related-articles .detail-related-articles {
+        width: 100%;
+    }
+    .detail-article .related-articles .detail-related-articles:first-child {
+        margin: 0 0 16px 0;
+    }
+
+    .arsip-kelas .arsip-kelas-info .btn {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 21px;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .arsip-sertifikat h3 {
+        font-size: 22px;
+        margin: 0px;
+    }
+    .arsip-sertifikat .search {
+        padding: 32px 12px;
+    }
+    .arsip-sertifikat .search-bar {
+        width: 100%;
+        height: 48px;
+        padding: 8px 0;
+    }
+    .arsip-sertifikat .search .alert {
+        width: 100%;
+    }
+    .arsip-sertifikat #btn-search {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .arsip-sertifikat-owner .btn {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 21px;
+        padding: 6px 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .x_unduh_sertifikat {
+        font-size: 14px !important;
+    }
+
+    .x_view_sertifikat {
+        font-size: 14px !important;
+    }
+
+    .x_fasilitas {
+        font-size: 14px !important;
+    }
+    
+    .cari-sertifikat h3 {
+        font-size: 22px;
+        margin: 0px;
+    }
+    .cari-sertifikat .search {
+        padding: 32px 12px;
+    }
+    .cari-sertifikat .search-bar {
+        width: 100%;
+        height: 48px;
+        padding: 8px 0;
+    }
+    .cari-sertifikat #btn-search {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    .cari-sertifikat-content .btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+
+    .informasi .content .menu,
+    .career .content .menu {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .member .content .info img {
+        width: 80px;
+        height: 80px;
+    }
+    .member .content .menu {
+        padding: 8px;
+        margin-bottom: 12px;
+    }
+    .member .content .menu .icon-menu {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .ubah-password .content {
+        background-color: #FFF;
+        border-radius: 16px;
+        padding: 32px 12px;
+    }
+
+    .member-sertifikat .nav-link,
+    .member-transaction .nav-link {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .member-sertifikat .sertifikat-saya-list .tombol .btn {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 21px;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .member-transaction .transaction-list .tombol .btn {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        padding: 6px 10px;
+        border-radius: 6px;
+    }
+}

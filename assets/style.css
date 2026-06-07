@@ -1,0 +1,2024 @@
+html {
+    overflow-y: scroll; /* Ensure scroll functionality */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+.fade-in {
+    animation: fadeIn 1s;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAFAFA;
+    color: #14142B;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar for Chrome, Safari, and other WebKit browsers */
+}
+.container {
+    /* box-shadow: 0px 0px 20px 0px #343a4026; */
+    max-width: 640px;
+    background-color: #fff;
+    margin: 0 auto;
+    padding: 60px 0 86px 0;
+}
+a {
+    color: #0eb4fc;
+    text-decoration: none;
+}
+hr {
+    border: 1px solid var(--General-Outline, #D9DBE9);
+    margin: 16px 0;
+}
+h3 {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+}
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 25.2px;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+}
+h6 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+textarea {
+    font-size: 14px !important;
+}
+
+.swal2-html-container {
+    font-size: 14px !important;
+}
+.badge {
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 100px;
+}
+.text-bg-danger {
+    background-color: #FF0022 !important;
+}
+.text-bg-success {
+    background-color: #00A455 !important;
+}
+.nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #7F808E;
+    background-color: #fff;
+    border: 1.5px solid var(--General-Outline, #D9DBE9);
+    margin: 0 16px 16px 0;
+    padding: 8px 16px;
+}
+.nav-link.active {
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+}
+.nav-link:hover {
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+}
+.nav-link:focus {
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+}
+.btn-outline-info {
+    background-color: #fff !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #0eb4fc;
+}
+.btn-info {
+    background-color: #0eb4fc !important;
+    color: #fff;
+}
+.btn-info:hover {
+    background-color: #0eb4fc !important;
+    color: #fff;
+}
+.form-control.is-invalid, .was-validated .form-control:invalid,
+.form-select.is-invalid, .was-validated .form-select:invalid {
+    border-width: 3px !important;
+}
+.form-check-input:checked {
+    background-color: #0eb4fc;
+}
+/* .form-check-input[type=checkbox] {
+    border: 1px solid #0eb4fc;
+} */
+.form-check-input[type=radio] {
+    border: 1px solid #0eb4fc;
+}
+.form-check-input[type=checkbox] {
+    transform: scale(1.4); 
+    border: 2px solid #0d6efd; 
+    cursor: pointer; 
+    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+    background-color: #0eb4fc !important;
+}
+#batal-transaksi-sweetalert {
+    background-color: #d33 !important; /* Custom color */
+}
+.progress {
+    background-color: #D9DBE9;
+}
+.progress-bar {
+    background-color: #0eb4fc;
+}
+.pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.pagination > li > a,
+.pagination > li > span { 
+    color: #5bc0de;
+}
+.page-link {
+    border: 0px;
+    margin-right: 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    color: #0eb4fc;
+}
+.page-item {
+    margin-top: 5px;
+}
+.page-item.active .page-link,
+.page-item.active .page-link {
+    background-color: #0eb4fc;
+    border-color: #0eb4fc;
+    border-radius: 5px;
+    font-weight: 500;
+}
+.fa-calendar-alt {
+    color: #0eb4fc;
+}
+.not-found {
+    padding: 32px;
+}
+.not-found img {
+    margin-bottom: 16px;
+}
+.not-found h6 {
+    margin-bottom: 4px;
+}
+.modal-header span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; /* Adjust this value as needed */
+}
+
+.loading-container .spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
+.header {
+    background-color: #fff;
+    padding: 20px 16px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 1000;
+}
+.header h4 {
+    margin: 0;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo img {
+    height: 32px;
+}
+.header .search-icon {
+    font-size: 40px;
+    color: #7F808E;
+}
+.header .navigation i {
+    color: #7F808E;
+    padding-right: 5px;
+}
+
+.announcement {
+    margin: 0;
+    padding: 12px 0;
+}
+.announcement .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+/* .announcement .carousel-item img {
+    height: 180px;
+} */
+#modal-pengumuman .pengumuman-title {
+    font-weight: 600;
+    font-size: 14px;
+}
+#modal-pengumuman .pengumuman-description {
+    font-size: 14px;
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 16px 16px;
+}
+.main-menu .menu-item {
+    text-align: center;
+    color: #4E4B66;
+    text-decoration: none;
+    margin: 0 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 20%;
+}
+.main-menu .menu-item .menu-text {
+    color: #4E4B66;
+}
+.main-menu .menu-item .menu-icon {
+    background-color: #fff;
+    box-shadow: 0px 1px 23px 0px #0B86AF1F;
+    padding: 12px;
+    margin-bottom: 4px;
+    border-radius: 20px;
+    width: 56px;
+    height: 56px;
+}
+.main-menu .menu-item .menu-icon img{
+    width: 32px;
+}
+
+#form-daftar .btn.disabled{
+    color: #fff !important;
+}
+
+.atur-ulang-password{
+    padding: 20px 16px 16px 16px;
+}
+        
+.date i {
+    color: #0eb4fc;
+}
+.kelas-unggulan {
+    background-color: #F0FDFF;
+    margin: 0;
+    padding: 16px;
+}
+.kelas-unggulan .class-card {
+    display: flex;
+    background-color: white;
+    border-radius: 16px;
+    margin-top: 16px;
+    box-shadow: 0px 12px 54px 0px #0B86AF1F;
+}
+.kelas-unggulan .class-card img {
+    width: 150px;
+    height: 150px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.kelas-unggulan .class-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+/* .kelas-unggulan .class-card-link:hover .class-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+} */
+.kelas-unggulan .class-card .image-wrapper {
+    position: relative;
+}
+.kelas-unggulan .class-card .image-wrapper .badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 1;
+    font-size: 10px;
+}
+.kelas-unggulan .class-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 150px;
+}
+.kelas-unggulan .class-info h5 {
+    margin-bottom: 10px;
+}
+
+.join-telegram {
+    display: none;
+    padding: 0px 16px 16px 16px;
+}
+.join-telegram a {
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    background: linear-gradient(203.2deg, #0eb4fc 21.67%, #0eb4fc 70%);
+    border-radius: 12px;
+    color: #fff; 
+    text-align:left;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-right: 16px;
+    padding: 0;
+}
+.join-telegram a span {
+    position: relative;
+    left: -20px;
+}
+.join-telegram img {
+    width: 100px;
+    cursor: pointer;
+}
+
+.join-whatsapp {
+    display: block;
+    padding: 16px;
+}
+.join-whatsapp a {
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    background: linear-gradient(203.2deg, #2db99a 21.67%, #0a9c8c 70%);
+    border-color: #2db99a;
+    border-radius: 12px;
+    color: #fff; 
+    text-align:left;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    margin-right: 16px;
+    padding: 0;
+}
+.join-whatsapp a span {
+    position: relative;
+    left: -20px;
+}
+.join-whatsapp img {
+    width: 80px;
+    cursor: pointer;
+    padding: 16px;
+    margin-right: 16px;
+}
+
+.search-bar {
+    position: relative;
+    padding: 24px 0;
+}
+.search-bar .form-control {
+    font-size: 14px;
+    line-height: 21px;
+}
+.search-bar .search-icon {
+    color: #7F808E;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.semua-kelas {
+    padding: 16px 16px 0 16px;
+}
+.semua-kelas h4 {
+    margin: 0;
+}
+.semua-kelas .class-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 12px 54px 0px #0B86AF1F;
+    margin: 8px 0 16px 0;
+}
+.semua-kelas .class-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.semua-kelas .class-card .image-wrapper {
+    position: relative;
+}
+.semua-kelas .class-card .image-wrapper .badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+.semua-kelas .class-card img {
+    width: 100%;
+    height: auto;
+}
+.semua-kelas .class-info {
+    padding: 16px;
+}
+.semua-kelas .class-info h5 {
+    margin: 0;
+    min-height: 100px;
+}
+.semua-kelas .class-info .date {
+    padding: 12px 0;
+}
+.semua-kelas .class-info .btn-lihat-kelas {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    padding: 12px 24px;
+}
+.semua-kelas .class-info .btn-lihat-kelas:hover {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+    padding: 12px 24px;
+}
+
+.footer {
+    background-color: #F0FDFF;
+    border-radius: 16px;
+    text-align: center;
+    color: #14142B;
+    padding: 24px;
+    margin: 16px;
+}
+footer p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+}
+footer .social-icons a {
+    color: #0eb4fc;
+    font-size: 32px;
+    padding: 0 6px;
+}
+.footer .copyright {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+.footer .hubungi-kami {
+    display: flex;
+    margin: 24px 0;
+    background-color: #FFF;
+    padding: 16px;
+    border-radius: 12px;
+}
+.footer .hubungi-kami div {
+    width: 50%;
+}
+
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 90px;
+    right: 15px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    border: 2px solid rgba(255,255,255,0.2);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    background-color: #20ba4f;
+    transform: scale(1.05);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+.bottom-nav a {
+    color: #7F808E;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.bottom-nav .nav-link:hover {
+    color: #00A9E0;
+}
+.bottom-nav .nav-link {
+    color: #7F808E;
+    background-color: #fff !important;
+    border: 0px;
+    margin: 0;
+    padding: 0;
+}
+.bottom-nav .nav-link.active {
+    color: #0eb4fc;
+    background-color: #fff !important;
+    border: 0px;
+}
+.bottom-nav i {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 4px;
+}
+.bottom-nav .container {
+    padding: 16px 16px 21px 16px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px -2px 30px 0px #0eb4fc0D;
+}
+
+.kelas-mandiri h4 {
+    margin: 0;
+}
+.kelas-mandiri h5 {
+    margin: 0;
+}
+.kelas-mandiri .class-title {
+    padding: 16px;
+}
+.kelas-mandiri .class-title .badge {
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+}
+.kelas-mandiri .class-title h4 {
+    padding: 16px 0;
+    margin: 0;
+}
+.kelas-mandiri .class-title .star-rating {
+    display: flex;
+}
+.kelas-mandiri .class-title .star-rating .star {
+    color: #FABC09;
+    font-size: 24px;
+    margin-right: 12px;
+}
+.kelas-mandiri .class-title .star-rating .peserta {
+    color: #7F808E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.kelas-mandiri .class-title .class-card{
+    display: none;
+}
+
+.kelas-mandiri .class-video {
+    padding: 16px;
+}
+.kelas-mandiri .class-video .class-video-iframe {
+    border-radius: 24px;
+}
+
+.kelas-mandiri .class-materi {
+    padding: 16px;
+}
+.kelas-mandiri .class-materi a {
+    width: 100%;
+    text-decoration: none;
+}
+.kelas-mandiri .class-materi .preview-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0eb4fc;
+    color: #FFF;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    width: 100%;
+    text-align: left;
+}
+.kelas-mandiri .class-materi .preview-button .title{
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+}
+.kelas-mandiri .class-materi .preview-button .fa-play-circle {
+    color: #FFF;
+    margin-right: 6px;
+}
+
+.kelas-mandiri .class-materi .materi-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F0FDFF;
+    color: #0B86AF;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 16px;
+}
+.kelas-mandiri .class-materi .materi-button .title {
+    display: flex;
+    flex-direction: column;
+}
+.kelas-mandiri .class-materi .materi-button .title .durasi-video {
+    color: #0B86AF;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0 0 4px 0;
+}
+.kelas-mandiri .class-materi .materi-button .title h5 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin: 0;
+}
+.kelas-mandiri .class-materi .materi-button .fa-play-circle {
+    color: #0eb4fc;
+    margin-right: 6px;
+}
+.kelas-mandiri .class-materi #curriculum .active .materi-button {
+    background-color: #0eb4fc;
+    color: #fff;
+}
+.kelas-mandiri .class-materi #curriculum .active .materi-button .durasi-video {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+.kelas-mandiri .class-materi #curriculum .active .materi-button .fa-play-circle {
+    color: #fff;
+    margin-right: 6px;
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(45, 206, 137, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(45, 206, 137, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(45, 206, 137, 0);
+    }
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item.passed {
+    opacity: 0.6;
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item.current {
+    border: 2px solid #74c3ec;
+    border-radius: 5px;
+    padding: 5px;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 16px;
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item .mulai-belajar-button {
+    display: none;
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item .mulai-belajar-button.passed {
+    display: none;
+}
+.kelas-mandiri .class-materi #curriculum .curriculum-item .mulai-belajar-button.current {
+    display: block;
+}
+.kelas-mandiri .class-materi .evaluation-card {
+    background-color: #fff;
+    border: 1px solid var(--General-Outline, #D9DBE9);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+.kelas-mandiri .class-materi .evaluation-card .evaluation-text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+.kelas-mandiri .class-materi .evaluation-card .score-minimum {
+    color: #7F808E;
+}
+.kelas-mandiri .class-materi .evaluation-card .score-peserta {
+    color: #4E4B66;
+}
+.kelas-mandiri .class-materi .evaluation-card .badge {
+    padding: 0 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.kelas-mandiri .class-materi .evaluation-card .retry-message {
+    color: #DD9002;
+    background-color: #FFFEF2;
+    border: 1px solid #FFE082;
+    border-radius: 4px;
+    padding: 4px 0;
+    margin-top: 8px;
+}
+.kelas-mandiri .class-materi .evaluation-card .lihat-dulu-text {
+    color: #7F808E;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 15px;
+}
+.kelas-mandiri .class-materi .evaluation-card .evaluation-button {
+    display: none;
+}
+.kelas-mandiri .class-materi .evaluation-card .evaluation-button.passed {
+    display: none;
+}
+.kelas-mandiri .class-materi .evaluation-card .evaluation-button.current {
+    display: block;
+}
+.kelas-mandiri .class-materi .message-yellow {
+    background-color: #FFFEF2;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+.kelas-mandiri .class-materi .action-button {
+    background-color: #fff;
+    border: 1px solid var(--General-Outline, #D9DBE9);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.kelas-mandiri .class-materi .action-button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-end;
+    
+}
+.kelas-mandiri .class-materi .action-button-text .action-button-title {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #14142B;
+}
+.kelas-mandiri .class-materi .action-button-text .action-button-desc {
+    color: #0eb4fc;
+}
+.kelas-mandiri .class-materi .action-button i {
+    color: #D9DBE9;
+}
+.kelas-mandiri .class-materi .action-button.disabled {
+    background-color: #EFF0F6;
+}
+.kelas-mandiri .class-materi .action-button.disabled .action-button-text .action-button-desc {
+    color: #7F808E;
+}
+
+.kelas-mandiri .category-buttons {
+    padding: 16px;
+}
+.kelas-mandiri .category-buttons .nav-link{
+    padding: 8px 12px;
+    margin: 0 12px 12px 0;
+}
+
+.kelas-mandiri #detail-kelas {
+    padding: 16px;
+}
+.kelas-mandiri #detail-kelas p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+}
+.kelas-mandiri #detail-kelas .desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    margin: 0;
+}
+.kelas-mandiri #detail-kelas .class-card {
+    display: flex;
+    background-color: white;
+}
+.kelas-mandiri #detail-kelas .class-card img {
+    width: 232px;
+    height: 232px;
+    border-radius: 10.82px;
+}
+.kelas-mandiri #detail-kelas .class-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.kelas-mandiri #detail-kelas .class-card .image-wrapper {
+    position: relative;
+}
+.kelas-mandiri #detail-kelas .class-card .image-wrapper .badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    z-index: 1;
+    font-size: 10px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info {
+    margin-left: 24px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section {
+    margin-bottom: 24px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section h5 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 4px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section span {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    margin-bottom: 4px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .pembicara img{
+    width: 40px;
+    height: 40px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .pembicara span{
+    margin-left: 8px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .pembicara .nama{
+    font-weight: 500;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .pembicara .job{
+    font-weight: 400px;
+    color: #7F808E;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .live-from {
+    color: #7F808E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .fa-video {
+    color: #2196F3;
+}
+.kelas-mandiri #detail-kelas .class-card .class-info .class-info-section .fa-youtube {
+    color: #FF0000;
+    margin-left: 12px;
+}
+
+.kelas-mandiri #profil-pengajar {
+    padding: 16px;
+}
+.kelas-mandiri #profil-pengajar .detail-pengajar {
+    display: flex;
+    justify-content: center;
+}
+.kelas-mandiri #profil-pengajar .profil-pengajar-card {
+    margin: 24px 12px;
+}
+.kelas-mandiri #profil-pengajar .profil-pengajar-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+}
+.kelas-mandiri #profil-pengajar .profil-pengajar-card h5 {
+    margin-bottom: 0;
+}
+.kelas-mandiri #profil-pengajar .profil-pengajar-card span {
+    color: #7F808E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.kelas-mandiri #profil-pengajar .profil-pengajar-desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    margin-bottom: 0;
+}
+
+.kelas-mandiri #kompetensi {
+    padding: 16px;
+}
+.kelas-mandiri #kompetensi h5 {
+    margin-bottom: 24px;
+}
+.kelas-mandiri #kompetensi p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+}
+.kelas-mandiri #kompetensi ul, 
+.kelas-mandiri #kompetensi ol {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    margin-bottom: 0;
+}
+
+.kelas-mandiri #panduan {
+    padding: 16px;
+}
+.kelas-mandiri #panduan h5 {
+    margin-bottom: 24px;
+}
+.kelas-mandiri #panduan .btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.kelas-mandiri #panduan .btn:hover {
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+}
+
+.kelas-mandiri #fasilitas {
+    padding: 16px;
+}
+.kelas-mandiri #fasilitas h5 {
+    margin-bottom: 24px;
+}
+.kelas-mandiri #fasilitas p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    margin-bottom: 24px;
+}
+.kelas-mandiri #fasilitas .card {
+    background-color: #F0FDFF;
+    border: none;
+}
+.kelas-mandiri #fasilitas .card-body {
+    padding: 16px;
+}
+.kelas-mandiri #fasilitas .card-body h4 {
+    margin-bottom: 8px;
+    color: #4E4B66;
+    text-align: center;
+}
+.kelas-mandiri #fasilitas .card-body p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    text-align: center;
+    margin-bottom: 16px;
+}
+.kelas-mandiri #fasilitas .card-body .btn-info {
+    border-radius: 12px;
+    padding: 12px 24px;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.kelas-mandiri #fasilitas .fasilitas-sertifikat span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+}
+.kelas-mandiri #fasilitas .fasilitas-sertifikat .btn {
+    width: 100%;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 24px;
+}
+.kelas-mandiri #fasilitas .fasilitas-sertifikat .btn:hover {
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+}
+.kelas-mandiri #fasilitas .fasilitas-desc {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #4E4B66;
+    margin-bottom: 0;
+}
+.kelas-mandiri #fasilitas .fasilitas-desc a {
+    color: #0eb4fc;
+}
+
+.kelas-mandiri #ulasan {
+    padding: 16px;
+}
+.kelas-mandiri #ulasan h5 {
+    margin-bottom: 24px;
+}
+.kelas-mandiri #ulasan .star-rating-big {
+    font-size: 36px;
+    color: #FABC09;
+}
+.kelas-mandiri #ulasan .rating-number {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.2px;
+    letter-spacing: -0.4000000059604645px;
+    margin-left: 0.5px;
+}
+.kelas-mandiri #ulasan .ulasan-progressbar {
+    display: none;
+}
+.kelas-mandiri #ulasan .card {
+    border: 1px solid var(--General-Outline, #D9DBE9);
+}
+.kelas-mandiri #ulasan .card-body {
+    padding: 12px;
+}
+.kelas-mandiri #ulasan .card-body .jumlah-ulasan {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #7F808E;
+    margin-top: 4px;
+}
+.kelas-mandiri #ulasan .reviews {
+    margin: 24px 0;
+}
+.kelas-mandiri #ulasan .reviews .review-card {
+    padding: 12px 0 16px 0;
+}
+.kelas-mandiri #ulasan .reviews .review-card hr {
+    margin: 12px 0 0 0;
+}
+.kelas-mandiri #ulasan .reviews .review-card .star-rating {
+    color: #FABC09;
+    font-size: 18px;
+}
+.kelas-mandiri #ulasan .reviews .review-card .review-name {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
+.kelas-mandiri #ulasan .reviews .review-card .review-date {
+    padding-bottom: 4px;
+}
+.kelas-mandiri #ulasan .reviews .review-card .review-desc {
+    color: #4E4B66;
+}
+
+.info-do-assessment span{
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    padding-bottom: 4px;
+}
+
+.info-nilai-kelulusan {
+    display: flex;
+    justify-content: space-between;
+}
+
+.detail-kelas-live img {
+    max-width: 640px;
+    width: 100%;
+    height: auto;
+}
+.detail-kelas-live .title {
+    padding: 16px;
+}
+.detail-kelas-live .badge {
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 4px;
+    margin-bottom: 16px;
+}
+.detail-kelas-live .title h4 {
+    margin-bottom: 16px;
+}
+.detail-kelas-live .title .nav-link{
+    padding: 8px 12px;
+    margin: 0 12px 0 0;
+}
+.detail-kelas-live #deskripsi, .detail-kelas-live #jadwal {
+    background-color: #FAFAFA;
+    padding: 16px;
+}
+.detail-kelas-live .wrapper {
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 20px 0px #0000000D;
+    background-color: #FFF;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+.detail-kelas-live .wrapper h5 {
+    margin-bottom: 24px;
+}
+.detail-kelas-live #deskripsi .wrapper .content {
+    margin-bottom: 24px;
+    color: #4E4B66;
+}
+.detail-kelas-live #deskripsi .wrapper .btn-warning {
+    background-color: #FABC09;
+    border-radius: 12px;
+    border: 1.5px solid #FABC09;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 500;
+    text-align: center;
+}
+.detail-kelas-live #jadwal .wrapper .date {
+    margin-bottom: 24px;
+}
+.detail-kelas-live .alert-warning {
+    border: #FFFEF2;
+    border-radius: 16px;
+    background-color: #FFFEF2;
+    padding: 12px;
+}
+.detail-kelas-live .alert-warning span {
+    color: #DD9002;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+}
+.detail-kelas-live #jadwal .class-info .btn {
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+}
+.detail-kelas-live #jadwal .class-info .btn-outline-success {
+    border: 1px solid #00A455;
+}
+.detail-kelas-live #jadwal .class-info .btn-outline-info {
+    border: 1px solid #0eb4fc;
+}
+.detail-kelas-live #jadwal .class-info .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}
+.detail-kelas-live .fa-video {
+    color: #2196F3;
+}
+.detail-kelas-live .fa-youtube {
+    color: #FF0000;
+    margin-left: 12px;
+}
+
+
+.asterisk-red {
+    color: red;
+}
+
+.form-kelas-live {
+    font-size: 15px;
+}
+
+.form-kelas-live .top-banner {
+    padding-top: 10px;
+}
+.form-kelas-live .top-banner > img{
+    width: 100%;
+}
+.form-kelas-live .class-banner > img{
+    width: 100%;
+}
+
+.form-kelas-live .description .fasilitas-kegiatan {
+    margin-left:24px;
+}
+.form-kelas-live .check-icon{
+    color: #00d26a;
+}
+.form-kelas-live .description .grup-pembagian-sertifikat {
+    margin-left:24px;
+}
+
+.form-kelas-live .user-form  {
+    padding: 24px;
+    margin-bottom: 36px;
+}
+.form-kelas-live .user-form .form-section {
+    margin-bottom: 36px;
+}
+.form-kelas-live .user-form .form-label {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+.form-kelas-live .user-form .form-text {
+    color: #6c757d;
+    font-size: 15px;
+}
+
+.form-kelas-live .other-section {
+    margin: 36px 0;
+}
+.form-kelas-live .other-section > .title {
+    background-color: #0eb4fc;
+    padding: 12px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+.form-kelas-live .other-section > .title h4 {
+    color: #fff;
+}
+.form-kelas-live a {
+    text-decoration: underline;
+}
+.form-kelas-live .user-form .other-section .form-input-share .form-label {
+    font-weight: 600;
+    font-size: 16px;
+}
+.form-kelas-live .bank-account {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.form-kelas-live .copy-btn {
+    background: #e1e1e1;
+    border: none;
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.form-kelas-live .copy-btn:hover {
+    background: #ccc;
+}
+
+.article {
+    padding: 16px 16px 0 16px;
+}
+.article h4 {
+    margin: 0;
+}
+.article .class-card {
+    background-color: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0px 12px 54px 0px #0B86AF1F;
+    margin: 8px 0 16px 0;
+}
+.article .class-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+.article .class-card .image-wrapper {
+    position: relative;
+}
+.article .class-card .image-wrapper .badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+}
+.article .class-card img {
+    width: 100%;
+    height: auto;
+}
+.article .class-info {
+    padding: 16px;
+}
+.article .class-info h5 {
+    margin: 0;
+    min-height: 100px;
+}
+.article .class-info .date {
+    padding: 12px 0;
+}
+.article .class-info .btn-lihat-kelas {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+    border-radius: 12px;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    padding: 12px 24px;
+    margin-top: 12px;
+}
+.article .class-info .btn-lihat-kelas:hover {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+    color: #fff;
+    padding: 12px 24px;
+}
+.list-article .text-bg-primary {
+    background-color: #F0FDFF !important;
+    color: #0eb4fc !important;
+}
+.list-article .date {
+    color: #7F808E;
+}
+
+.detail-article img {
+    max-width: 640px;
+    width: 100%;
+    height: auto;
+}
+.detail-article .postingan {
+    padding: 16px;
+}
+.detail-article .postingan .share-button {
+    margin: 8px 0 16px 0;
+}
+.detail-article .postingan .share-button a {
+    margin-right: 8px;
+}
+.detail-article .postingan .share-text {
+    margin-right: 8px;
+}
+.detail-article .badge {
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 4px;
+}
+.detail-article .postingan h3 {
+    margin: 16px 0;
+}
+.detail-article .postingan .nav-link{
+    padding: 8px 12px;
+    margin: 0 12px 0 0;
+}
+.detail-article .content {
+    padding-bottom: 16px;
+    color: #4E4B66;
+    font-size: 14px;
+    line-height: 21px;
+}
+.detail-article .text-bg-primary {
+    background-color: #F0FDFF !important;
+    color: #0eb4fc !important;
+}
+.detail-article .date {
+    color: #7F808E;
+}
+.detail-article h6 {
+    margin: 16px 0;
+}
+.detail-article .related-articles {
+    display: flex;
+    flex-direction: row;
+}
+.detail-article .related-articles img {
+    max-width: 100px;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+}
+.detail-article .related-articles .detail-related-articles {
+    display: flex;
+    flex-grow: 1;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 12px 54px 0px #0B86AF1F;
+}
+.detail-article .related-articles .detail-related-articles:first-child {
+    margin: 0 16px 0 0;
+}
+.detail-article .related-articles .detail-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 65%;
+    padding: 8px;
+    justify-content: space-between; /* Ensures spacing between title and link */
+}
+.detail-article .related-articles .detail-info .title {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Adjusted to 2 lines for clarity */
+    line-clamp: 2; /* Standard property */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0;
+    margin-bottom: auto; /* Pushes the title up */
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #14142B;
+}
+.detail-article .related-articles .detail-info a {
+    text-decoration: none;
+}
+
+.arsip {
+    padding: 16px;
+    background-color: #F0FDFF;
+}
+.arsip .search-bar {
+    padding: 6px 0;
+    margin-bottom: 10px;
+}
+.arsip-kelas {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+.arsip-kelas h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #14142B;
+    margin-bottom: 12px;
+}
+.arsip-kelas .arsip-kelas-info {
+    margin-top: 12px;
+}
+.arsip-kelas .arsip-kelas-info .btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.arsip-kelas .arsip-kelas-info .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}
+
+.arsip-sertifikat {
+    padding: 20px 16px 16px 16px;
+    background-color: #F0FDFF;
+}
+.arsip-sertifikat img {
+    width: 150px;
+    margin-bottom: 8px;
+}
+.arsip-sertifikat .search {
+    background-color: #FFF;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+.arsip-sertifikat h3 {
+    text-align: center;
+    margin: 0px;
+}
+.arsip-sertifikat .search-bar {
+    width: 400px;
+    height: 48px;
+    padding: 8px 0;
+}
+.arsip-sertifikat .search .alert {
+    width: 400px;
+    margin: 8px 0;
+}
+.arsip-sertifikat #btn-search {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #0eb4fc;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    padding: 12px 24px;
+    margin-top: 6px;
+}
+/* .arsip-sertifikat .list-sertifikat {
+    min-height: 150px;
+} */
+
+.arsip-sertifikat-owner {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 12px;
+    margin: 16px 0;
+}
+.arsip-sertifikat-owner .info-nomor-sertifikat {
+    color: #0eb4fc;
+}
+.arsip-sertifikat-owner .info-lain {
+    color: #7F808E;
+}
+.arsip-sertifikat-owner .tombol {
+    text-align: center;
+}
+.arsip-sertifikat-owner .btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    width: 100%;
+}
+.arsip-sertifikat-owner .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}
+.arsip-sertifikat-owner .col-md-6, .arsip-sertifikat .col-sm-12 {
+    padding: 0px;
+}
+
+.cari-sertifikat {
+    padding: 20px 16px 16px 16px;
+    background-color: #F0FDFF;
+}
+.cari-sertifikat img {
+    width: 150px;
+    margin-bottom: 8px;
+}
+.cari-sertifikat .search {
+    background-color: #FFF;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+}
+.cari-sertifikat h3 {
+    text-align: center;
+    margin: 0px;
+}
+.cari-sertifikat .search-bar {
+    width: 400px;
+    height: 48px;
+    padding: 8px 0;
+}
+.cari-sertifikat #btn-search {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #0eb4fc;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    padding: 12px 24px;
+    margin-top: 6px;
+}
+.cari-sertifikat-content {
+    background-color: white; 
+    border: 0px; 
+    border-radius: 8px; 
+    margin-top: 16px;
+    padding: 12px; 
+}
+.cari-sertifikat-content .row {
+    margin-bottom: 8px;
+}
+.cari-sertifikat-content .unduh-sertifikat {
+    margin-top: 16px;
+    text-align: center;
+}
+.cari-sertifikat-content .btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 12px;
+}
+.cari-sertifikat-content .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}
+.cari-sertifikat-content .info-name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+    color: #7F808E;
+}
+.cari-sertifikat-content .info-colon {
+    color: #7F808E;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.cari-sertifikat-content .info-kelas {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    color: #0eb4fc;
+    text-decoration: none;
+}
+.cari-sertifikat-content .info-value {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: left;
+    color: #14142B;
+}
+.cari-sertifikat-content .info-value .badge {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: left;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.informasi .content,
+.career .content{
+    padding: 20px 16px 16px 16px;
+}
+.informasi .content .menu-area, 
+.career .content .menu-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.informasi .content .menu,
+.career .content .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 16px;
+    border-radius: 16px;
+    box-shadow: 0px 1px 23px 0px #0B86AF14;
+    width: 48%;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.informasi .content .menu h6,
+.career .content .menu h6 {
+    margin-bottom: 0;
+    color: #14142B;
+}
+.detail-informasi .content,
+.detail-career .content {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.panduan .content {
+    padding: 22px 16px 16px 16px;
+}
+.panduan .content .nav-link {
+    padding: 12px 16px;
+    border-radius: 8px;
+    background-color: #F0FDFF;
+    border: none;
+    color: #0eb4fc;
+    text-align: left;
+    margin: 0 0 16px 0;
+}
+.panduan .content .nav-link.active {
+    background-color: #0eb4fc;
+    color: #FFF;
+}
+.panduan .content .nav-link:hover {
+    background-color: #0eb4fc;
+    color: #FFF;
+}
+.panduan .content iframe {
+    border-radius: 24px;
+}
+
+.bottom-nav .registrasi-kelas {
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+}
+
+.bottom-nav .btn-daftar-akun {
+    padding: 12px 24px;
+    border-radius: 12px;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    width: 100%;
+}
+
+.login-form {
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.login-form .card {
+    border: none;
+    box-shadow: 0 5px 10px rgb(154 160 185 / 5%), 0 15px 40px rgb(166 173 201 / 20%);
+}
+
+.login-form .card .card-header {
+    background-color: #5e72e4;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.login-form .card .card-header h2 {
+    color: white !important;
+}
+
+.login-form .card .card-body {
+    padding: 40px 60px;
+}
+
+.login-form label {
+    font-size: 0.9rem;
+}
+
+.member .content {
+    padding: 20px 16px 16px 16px;
+    margin-bottom: 40px;
+}
+.member .content .info {
+    box-shadow: 0px 1px 23px 0px #0B86AF1F;
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+}
+.member .content .info img {
+    width: 120px;
+    height: 120px;
+}
+.member .content .info .detail-info {
+    margin-top: 12px;
+}
+.member .content .info .detail-info span {
+    color: #A0A3BD;
+}
+.member .content .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0px 1px 23px 0px #0B86AF14;
+    margin-bottom: 16px;
+}
+.member .content .menu h6 {
+    margin-bottom: 0;
+    color: #14142B;
+}
+.member .content .menu .icon-menu {
+    padding: 12px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 22px;
+}
+
+.kelas-saya {
+    background-color: #F0FDFF;
+    padding: 20px 16px 16px 16px;
+}
+.kelas-saya .semua-kelas {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 12px;
+}
+
+.profil-member {
+    background-color: #F0FDFF;
+    padding: 20px 16px 16px 16px;
+}
+.profil-member .content {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 32px 12px;
+}
+.profil-member .content #btn-update-profile {
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    background-color: #0eb4fc;
+}
+
+.ubah-password {
+    background-color: #F0FDFF;
+    padding: 20px 16px 16px 16px;
+}
+.ubah-password .content {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 32px 94px;
+}
+.ubah-password .content .btn {
+    padding: 12px 24px 12px 24px;
+    border-radius: 12px;
+    background-color: #0eb4fc;
+}
+
+.member-sertifikat,
+.member-transaction {
+    margin-top: 6px;
+}
+.member-sertifikat .nav-link,
+.member-transaction .nav-link {
+    margin: 0px;
+    padding: 12px 16px;
+    color: #14142B;
+    background-color: #fff;
+    border: 0px;
+    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+}
+.member-sertifikat .nav-link.active,
+.member-transaction .nav-link.active {
+    padding: 12px 16px;
+    color: #0eb4fc;
+    background-color: #fff !important;
+    border: 0px;
+    border-bottom: 1px solid #0eb4fc;
+    border-radius: 0px;
+}
+.member-sertifikat .nav-link.active,
+.member-transaction .nav-link.active {
+    background-color: #fff !important;
+    border: 0px;
+    border-bottom: 1px solid #0eb4fc;
+}
+.member-sertifikat .nav-link:hover,
+.member-transaction .nav-link:hover {
+    background-color: #fff !important;
+    border: 0px;
+    border-bottom: 1px solid #0eb4fc;
+}
+.member-sertifikat .nav-link:focus,
+.member-transaction .nav-link:focus {
+    background-color: #fff !important;
+    border: 0px;
+    border-bottom: 1px solid #0eb4fc;
+}
+.member-sertifikat .content {
+    background-color: #F0FDFF;
+    padding: 20px 16px 16px 16px;
+}
+.member-sertifikat .sertifikat-saya-list {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+.member-sertifikat .sertifikat-saya-list .text-info {
+    color: #0eb4fc;
+}
+.member-sertifikat .sertifikat-saya-list h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #14142B;
+    margin: 4px 0;
+}
+.member-sertifikat .sertifikat-saya-list .tanggal {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #7F808E;
+}
+.member-sertifikat .sertifikat-saya-list .tombol {
+    margin-top: 6px;
+}
+.member-sertifikat .sertifikat-saya-list .tombol .btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.member-sertifikat .sertifikat-saya-list .tombol .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}
+
+.member-transaction .content {
+    background-color: #F0FDFF;
+    padding: 20px 16px 16px 16px;
+}
+.member-transaction .transaction-list {
+    background-color: #FFF;
+    border-radius: 16px;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+.member-transaction .transaction-list .text-info {
+    color: #0eb4fc;
+    word-wrap: break-word;
+}
+.member-transaction .transaction-list h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #14142B;
+    margin: 4px 0;
+}
+.member-transaction .transaction-list .tanggal {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #7F808E;
+}
+.member-transaction .transaction-list .tombol {
+    margin-top: 6px;
+}
+.member-transaction .transaction-list .tombol .btn {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+.member-transaction .transaction-list .tombol .btn-outline-info:hover {
+    color: #FFF;
+    box-shadow: 0px 16px 40px -2px #7090B033;
+    background-color: #0eb4fc !important;
+    border: 1.5px solid var(--Primary-Default, #0eb4fc);
+}

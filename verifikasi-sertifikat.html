@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="assets/js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1G1PM41SEC');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="253549602237-slj0mjhet4dl1fmsbr24meg06bij8mha.apps.googleusercontent.com">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="vTUmeTmJ4V82nBdnnsOfHW1pdXeXDfw3aiWa0sEi">
+    <title>Edukasa.id</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://edukasa.id/img/assets/icons/edukasa-favicon.png">
+
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css2.css" rel="stylesheet">
+    <link href="assets/all.min.css" rel="stylesheet">
+    <link href="assets/jquery-ui.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="assets/mobile-style.css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(250, 250, 250);">
+
+    <div class="header-wrapper" style="zoom: 0.9">
+        <header class="header d-flex justify-content-between align-items-center">
+            <a href="index.html" class="navigation text-decoration-none text-dark">
+                <h4><i class="fas fa-arrow-left"></i> Verifikasi Sertifikat</h4>
+            </a>
+            <!-- <div class="d-flex align-items-center">
+                <div class="form-check form-switch darkmode">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </div> -->
+        </header>
+    </div>
+
+    <div class="container" style="zoom: 0.9">
+        <main class="cari-sertifikat">
+            <section class="search">
+                <img src="assets/certificate.svg" alt="cari sertifikat">
+                <h3>Masukkan Nomor Sertifikat</h3>
+                <div class="search-bar">
+                    <input type="text" class="form-control" id="keyword-search" placeholder="Masukkan nomor sertifikat">
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+                <button id="btn-search" class="btn btn-info">Cari</button>
+            </section>
+            <section class="list-sertifikat" id="load-content">
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>Ikuti juga update terbaru <br>melalui akun sosial media kami</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/edukasa.id" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/diklat-online" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Edukasa-id" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/edukasaid" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="hubungi-kami d-flex" id="hubungi-kami-content">
+                <div>
+                    <h6><i class="fa-regular fa-map"></i>&nbsp; Lokasi</h6>
+                    <span><b>PT Sumber Belajar Bersama</b></span><br>
+                    <span>Grogolan, Rejoslamet, <br>Kec. Mojowarno, Kabupaten Jombang, <br>Jawa Timur 61475</span>
+                </div>
+                <hr>
+                <div>
+                    <h6><i class="fa-solid fa-headset"></i>&nbsp; Kontak</h6>
+                    <span>Email : edukasa.id@gmail.com</span><br>
+                    <span>Phone : 085190851001</span>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2022 &copy; Edukasa.id. All Right Reserved.</p>
+        </footer>
+
+        <nav class="navbar navbar-expand fixed-bottom bottom-nav">
+            <div class="container">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-home"></i> Beranda
+                </a>
+                <a class="nav-link" href="https://edukasa.id/kelas-mandiri">
+                    <i class="fa-solid fa-tv"></i> Mandiri
+                </a>
+                <a class="nav-link" href="https://edukasa.id/kelas-live">
+                    <i class="fa-solid fa-wifi"></i> Live
+                </a>
+                <a class="nav-link" href="https://edukasa.id/bacaan">
+                    <i class="fa-regular fa-file-lines"></i> Bacaan
+                </a>
+                <a class="nav-link" href="index.html?daftar=1">
+                    <i class="fa-regular fa-user"></i> Daftar
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <a href="https://api.whatsapp.com/send?phone=6285190851001" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="assets/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="assets/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/sweetalert2.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        function applyDarkMode(isDarkMode) {
+            if (isDarkMode) {
+                $('body').css('background-color', 'rgb(0 0 0 / 80%)');
+                $('#darkModeToggle').prop('checked', true);
+            } else {
+                $('body').css('background-color', '#FAFAFA');
+                $('#darkModeToggle').prop('checked', false);
+            }
+        }
+        var isDarkMode = localStorage.getItem('darkMode') === 'true';
+        applyDarkMode(isDarkMode);
+        $('#darkModeToggle').on('change', function(event) {
+            var isDarkMode = $(this).is(':checked');
+            localStorage.setItem('darkMode', isDarkMode);
+            applyDarkMode(isDarkMode);
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    // Database sertifikat lokal
+    var sertifikatDB = {
+        "01.026/DO-UPDME-SER/IV/2026/LRCKG6742": "verifikasi-sertifikat/120697b1e6807dc01769676392WZ6SF6742.html",
+        "13.003/ED-NSPPA/II/2026/XEA4U765":      "verifikasi-sertifikat/121699fae3cd41161772072508AJW7Y765.html",
+        "13.003/ED-NSPAK/IV/2026/YL0T910140":    "verifikasi-sertifikat/12269d79d89eae121775738249ZYDCV10140.html"
+    };
+
+    $(document).ready(function() {
+        function cariSertifikat() {
+            let search = $('#keyword-search').val().trim();
+            if (search == '' || search == null) { return false; }
+
+            $('#load-content').show();
+            $('#load-content').html('<div class="loading-container"><div class="spinner-border text-primary" role="status"></div><span class="ms-2"> Mencari data sertifikat...</span></div>');
+
+            setTimeout(function() {
+                let targetPage = sertifikatDB[search];
+                if (targetPage) {
+                    window.location.href = targetPage;
+                } else {
+                    $('#load-content').html(
+                        '<div class="cari-sertifikat-content text-center py-4">' +
+                        '<i class="fa-solid fa-circle-xmark text-danger" style="font-size:3rem"></i>' +
+                        '<h5 class="mt-3">Sertifikat Tidak Ditemukan</h5>' +
+                        '<p class="text-muted">Nomor sertifikat <strong>' + search + '</strong> tidak ditemukan dalam sistem kami.</p>' +
+                        '</div>'
+                    );
+                }
+            }, 600);
+
+            return false;
+        }
+
+        $('#btn-search').click(function() {
+            return cariSertifikat();
+        });
+
+        $('#keyword-search').on('keypress', function(e) {
+            if (e.which == 13) {
+                return cariSertifikat();
+            }
+        });
+    });
+    </script>
+</body>
+</html>

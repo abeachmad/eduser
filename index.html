@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!-- Google tag (gtag.js) -->
+    <script async src="assets/js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-1G1PM41SEC');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="253549602237-slj0mjhet4dl1fmsbr24meg06bij8mha.apps.googleusercontent.com">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="vTUmeTmJ4V82nBdnnsOfHW1pdXeXDfw3aiWa0sEi">
+    <title>Edukasa.id</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="https://edukasa.id/img/assets/icons/edukasa-favicon.png">
+
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css2.css" rel="stylesheet">
+    <link href="assets/all.min.css" rel="stylesheet">
+    <link href="assets/jquery-ui.css" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet">
+    <link href="assets/mobile-style.css" rel="stylesheet">
+</head>
+<body style="background-color: rgb(250, 250, 250);">
+
+    <div class="header-wrapper" style="zoom: 0.9">
+        <header class="header d-flex justify-content-between align-items-center">
+            <a href="index.html">
+                <div class="logo">
+                    <img src="assets/edukasa-logo.png" alt="Logo Edukasa.id">
+                </div>
+            </a>
+            <!-- <div class="d-flex align-items-center">
+                <div class="form-check form-switch darkmode">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle">
+                        <i class="fas fa-sun"></i>
+                    </label>
+                </div>
+            </div> -->
+        </header>
+    </div>
+
+    <div class="container" style="zoom: 0.9">
+        <main>
+            <!-- Announcement Carousel -->
+            <div id="announcement" class="announcement carousel slide banner fade-in" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#announcement" data-bs-slide-to="0" class="" aria-label="Slide 0"></button>
+                    <button type="button" data-bs-target="#announcement" data-bs-slide-to="1" class="" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#announcement" data-bs-slide-to="2" class="active" aria-label="Slide 2" aria-current="true"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pengumuman" data-id="32" data-title="Selamat Datang!!!" data-description="&lt;p&gt;Selamat Datang di Edukasa.id. Selamat belajar!&lt;/p&gt;">
+                            <img src="assets/5Al5aa2n6zSOgKm5qU3e9lgnuQSGkeUx3cG9X0Hc.webp" alt="Selamat Datang!!!" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pengumuman" data-id="31" data-title="Grup Telegram" data-description="&lt;p&gt;&lt;a href=&quot;https://whatsapp.com/channel/0029Vb3CiZ8ATRSsMW2uP10q&quot; target=&quot;_blank&quot;&gt;&lt;b&gt;Klik di sini untuk masuk saluran WA kami&lt;/b&gt;&lt;/a&gt;&lt;/p&gt;">
+                            <img src="assets/VWFf6gdC2EDuj7FcwBgMf7yCjcw2F4HuOESCIe1M.webp" alt="Grup Telegram" class="d-block w-100">
+                        </a>
+                    </div>
+                    <div class="carousel-item active">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#modal-pengumuman" data-id="30" data-title="Selamat Datang Sobat Edukasa!!!" data-description="&lt;p&gt;Lamans ini merupakan #SumberBelajarBersama&lt;/p&gt;">
+                            <img src="assets/z1vYDdPQw0fhjMsMTxACmmvrpFgskl6ZWxUoqs0F.webp" alt="Selamat Datang Sobat Edukasa!!!" class="d-block w-100">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Menu Icons -->
+            <section class="main-menu">
+                <a href="https://edukasa.id/kelas-mandiri" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-class.svg" alt="Menu Kelas Mandiri">
+                    </div>
+                    <div class="menu-text">Kelas<br>Mandiri</div>
+                </a>
+                <a href="https://edukasa.id/kelas-live" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-live.svg" alt="Menu Kelas Live">
+                    </div>
+                    <div class="menu-text">Kelas<br>Live</div>
+                </a>
+                <a href="verifikasi-sertifikat.html" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-certificate.svg" alt="Menu Verifikasi Sertifikat">
+                    </div>
+                    <div class="menu-text">Verifikasi<br>Sertifikat</div>
+                </a>
+                <a href="https://edukasa.id/arsip" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-archive.svg" alt="Menu Arsip Kelas">
+                    </div>
+                    <div class="menu-text">Arsip<br>Kelas</div>
+                </a>
+                <a href="https://edukasa.id/panduan" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-information.svg" alt="Menu Panduan">
+                    </div>
+                    <div class="menu-text">Panduan</div>
+                </a>
+                <a href="https://edukasa.id/bacaan" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-book.svg" alt="Menu Bacaan">
+                    </div>
+                    <div class="menu-text">Bacaan</div>
+                </a>
+                <a href="https://edukasa.id/peluang-karir" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-career.svg" alt="Menu Karir">
+                    </div>
+                    <div class="menu-text">Karir</div>
+                </a>
+                <a href="https://edukasa.id/informasi" class="menu-item">
+                    <div class="menu-icon">
+                        <img src="assets/customicon-other.svg" alt="Informasi lainnya">
+                    </div>
+                    <div class="menu-text">Lainnya</div>
+                </a>
+            </section>
+
+            <!-- Kelas Unggulan -->
+            <section class="kelas-unggulan">
+                <h4>Kelas Unggulan</h4>
+                <a href="https://edukasa.id/kelas-live/125/pelatihan-ai-untuk-produktivitas-kerja" class="class-card-link">
+                    <div class="class-card fade-in">
+                        <div class="image-wrapper">
+                            <span class="badge text-bg-danger">
+                                <i class="fa-solid fa-wifi"></i>
+                                LIVE
+                            </span>
+                            <img src="assets/HXPkuPvHvRWz6FIPifdYQTHLpajIuEHwYjAdsCJ1.webp" alt="Pelatihan Nasional AI untuk Produktivitas Kerja Harian: Praktik Claude, Gemini, dan ChatGPT">
+                        </div>
+                        <div class="class-info">
+                            <h5 id="class-title">Pelatihan Nasional AI untuk Produktivitas Kerja Harian: Praktik Claude, Gemini, dan ChatGPT</h5>
+                            <div class="date">
+                                <span><i class="far fa-calendar-alt"></i>&nbsp; 22 Juni 2026</span><br>
+                                <span><i class="far fa-clock"></i>&nbsp; 19:30 WIB</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </section>
+
+            <!-- Join WhatsApp -->
+            <section class="join-whatsapp">
+                <a href="https://whatsapp.com/channel/0029Vb3CiZ8ATRSsMW2uP10q" target="_blank" class="btn btn-success fade-in">
+                    <img src="assets/icon-whatsapp-green.png" alt="Bergabung ke saluran WhatsApp Edukasa">
+                    <span>Klik Untuk Bergabung<br>Saluran WhatsApp Edukasa</span>
+                </a>
+            </section>
+
+            <!-- Semua Kelas -->
+            <section class="semua-kelas" id="text-jelajahi-program-pilihan">
+                <h4>Semua Kelas</h4>
+                <div class="search-bar">
+                    <input type="text" class="form-control" id="keyword-search" placeholder="Cari kelas">
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+                <div id="category-buttons" class="category-buttons">
+                    <ul class="nav nav-pills" id="classTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="all-tab" data-bs-toggle="tab" href="#all" role="tab" aria-selected="true">Semua Kategori</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="Studi Lanjut-tab" data-bs-toggle="tab" href="#87" role="tab" aria-selected="false" tabindex="-1">Studi Lanjut</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="Umum-tab" data-bs-toggle="tab" href="#89" role="tab" aria-selected="false" tabindex="-1">Umum</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="Karir-tab" data-bs-toggle="tab" href="#90" role="tab" aria-selected="false" tabindex="-1">Karir</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="Teknologi-tab" data-bs-toggle="tab" href="#92" role="tab" aria-selected="false" tabindex="-1">Teknologi</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="ASN-tab" data-bs-toggle="tab" href="#93" role="tab" aria-selected="false" tabindex="-1">ASN</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row list-kelas" id="load-content">
+                    <div class="col-sm-6">
+                        <a href="https://edukasa.id/kelas-live/125/pelatihan-ai-untuk-produktivitas-kerja" class="class-card-link">
+                            <div class="class-card">
+                                <div class="image-wrapper position-relative">
+                                    <span class="badge text-bg-danger position-absolute"><i class="fa-solid fa-wifi"></i> LIVE</span>
+                                    <img src="assets/HXPkuPvHvRWz6FIPifdYQTHLpajIuEHwYjAdsCJ1.webp" alt="Pelatihan Nasional AI untuk Produktivitas Kerja Harian: Praktik Claude, Gemini, dan ChatGPT">
+                                </div>
+                                <div class="class-info">
+                                    <h5>Pelatihan Nasional AI untuk Produktivitas Kerja Harian: Praktik Claude, Gemini, dan ChatGPT</h5>
+                                    <div class="date">
+                                        <span><i class="far fa-calendar-alt"></i>&nbsp; 22 Juni 2026</span><br>
+                                        <span><i class="far fa-clock"></i>&nbsp; 19:30 WIB</span>
+                                    </div>
+                                    <button class="btn btn-outline-info btn-lihat-kelas">Lihat Kelas</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://edukasa.id/kelas-live/124/international-webinar-integrating-technology-digital-innovation-and-ai-for-inclusive-and-youth-driven-agrifood-systems-transformation" class="class-card-link">
+                            <div class="class-card">
+                                <div class="image-wrapper position-relative">
+                                    <span class="badge text-bg-danger position-absolute"><i class="fa-solid fa-wifi"></i> LIVE</span>
+                                    <img src="assets/CpQ3ySbtTRxWeO0xoL6Dxv4al3tompISXtdU7Uj3.webp" alt="International Webinar: Integrating Technology, Digital Innovation and AI for Inclusive and Youth-Driven Agrifood Systems Transformation">
+                                </div>
+                                <div class="class-info">
+                                    <h5>International Webinar: Integrating Technology, Digital Innovation and AI for Inclusive and Youth-Driven Agrifood Systems Transformation</h5>
+                                    <div class="date">
+                                        <span><i class="far fa-calendar-alt"></i>&nbsp; 22 Mei 2026</span><br>
+                                        <span><i class="far fa-clock"></i>&nbsp; 19:00 WIB</span>
+                                    </div>
+                                    <button class="btn btn-outline-info btn-lihat-kelas">Lihat Kelas</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://edukasa.id/kelas-live/122/pelatihan-nasional-pengenalan-dan-pemanfaatan-artificial-intelligence-ai-di-era-digital1773013927gt1se" class="class-card-link">
+                            <div class="class-card">
+                                <div class="image-wrapper position-relative">
+                                    <span class="badge text-bg-danger position-absolute"><i class="fa-solid fa-wifi"></i> LIVE</span>
+                                    <img src="assets/FS13dATtiPRkgIUO6MljsDRLMojwqYBuUh5nK8ob.webp" alt="Pelatihan Nasional Teknik Prompt AI untuk Mendukung Pekerjaan Harian: Penulisan, Analisis dan Kreativitas">
+                                </div>
+                                <div class="class-info">
+                                    <h5>Pelatihan Nasional Teknik Prompt AI untuk Mendukung Pekerjaan Harian: Penulisan, Analisis dan Kreativitas</h5>
+                                    <div class="date">
+                                        <span><i class="far fa-calendar-alt"></i>&nbsp; 06 April 2026</span><br>
+                                        <span><i class="far fa-clock"></i>&nbsp; 19:30 WIB</span>
+                                    </div>
+                                    <button class="btn btn-outline-info btn-lihat-kelas">Lihat Kelas</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="https://edukasa.id/kelas-live/123/international-webinar-empowering-young-women-and-youth-to-transform-inclusive-and-resilient-agrifood-systems1773948261XkLqZ" class="class-card-link">
+                            <div class="class-card">
+                                <div class="image-wrapper position-relative">
+                                    <span class="badge text-bg-danger position-absolute"><i class="fa-solid fa-wifi"></i> LIVE</span>
+                                    <img src="assets/Uqsln304EDh5E0I4XLjVwFsvex6LBsQw6mpSHi0z.webp" alt="International Webinar: Empowering Young Women and Youth to Transform Inclusive and Resilient Agrifood Systems">
+                                </div>
+                                <div class="class-info">
+                                    <h5>International Webinar: Empowering Young Women and Youth to Transform Inclusive and Resilient Agrifood Systems</h5>
+                                    <div class="date">
+                                        <span><i class="far fa-calendar-alt"></i>&nbsp; 27 Maret 2026</span><br>
+                                        <span><i class="far fa-clock"></i>&nbsp; 19:00 WIB</span>
+                                    </div>
+                                    <button class="btn btn-outline-info btn-lihat-kelas">Lihat Kelas</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col d-flex justify-content-center">
+                            <nav>
+                                <ul class="pagination">
+                                    <li class="page-item disabled" aria-disabled="true" aria-label="&laquo; Previous">
+                                        <span class="page-link" aria-hidden="true">&#8249;</span>
+                                    </li>
+                                    <li class="page-item active" aria-current="page"><span class="page-link">1</span></li>
+                                    <li class="page-item"><a class="page-link" href="https://edukasa.id/ajax-get-diklat?category=all&page=2">2</a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="https://edukasa.id/ajax-get-diklat?category=all&page=2" rel="next" aria-label="Next &raquo;">&#8250;</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Modal Pengumuman -->
+        <div class="modal fade" id="modal-pengumuman">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header pengumuman-title">
+                        <span></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body pengumuman-description">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Daftar -->
+        <div class="modal fade" id="modalDaftar">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Portal Daftar Edukasa.id</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body list-daftar d-flex flex-column align-items-center justify-content-center">
+                        <a class="btn btn-info btn-sm w-100 mb-2" id="btn-daftar-google" href="#" role="button" style="text-transform:none">
+                            <div class="list-login-component-wrapper">
+                                <img width="30" alt="Daftar menggunakan google" src="assets/icon_google.png">
+                                <span>Daftar dengan Google</span>
+                            </div>
+                        </a>
+                        <a class="btn btn-info btn-sm w-100 mb-2" id="btn-daftar-email" href="#" role="button" style="text-transform:none">
+                            <div class="list-login-component-wrapper">
+                                <img width="30" alt="Daftar menggunakan email" src="assets/icon_email.png">
+                                <span>Daftar dengan Email</span>
+                            </div>
+                        </a>
+                        <div class="yuk-login-dulu mt-2">
+                            <img src="assets/secure.png" width="35">
+                            <b>Sudah Punya Akun? <a href="#" class="masukAkun">Masuk</a></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Daftar Email -->
+        <div class="modal fade" id="modalDaftarEmail">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Portal Daftar Edukasa.id</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-daftar">
+                            <input type="text" class="form-control form-control-sm mb-2" id="namaDaftar" name="nama" placeholder="Nama Lengkap" required>
+                            <input type="email" class="form-control form-control-sm mb-2" id="emailDaftar" name="email" placeholder="Email" required>
+                            <input type="text" class="form-control form-control-sm mb-2" id="tanggalLahirDaftar" name="tanggalLahir" placeholder="Tanggal Lahir" required>
+                            <div class="input-group mb-2" id="show_hide_password">
+                                <input type="password" class="form-control form-control-sm border-right-white" id="passwordDaftar" name="password" placeholder="Password" required>
+                                <span class="input-group-text">
+                                    <a href="#" tabindex="-1"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                            <div class="input-group mb-2" id="show_hide_confirm_password">
+                                <input type="password" class="form-control form-control-sm border-right-white" id="confirmPasswordDaftar" name="password_confirmation" placeholder="Konfirmasi Password" required>
+                                <span class="input-group-text">
+                                    <a href="#" tabindex="-1"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input syarat_ketentuan_req" name="syarat_ketentuan">
+                                <label class="form-check-label pl-0 ms-1">
+                                    <p style="margin-bottom: 0px">Saya setuju dengan
+                                        <a href="https://edukasa.id/informasi/20/syarat-dan-ketentuan" target="_blank">Syarat &amp; Ketentuan</a>
+                                        dan <a href="https://edukasa.id/informasi/21/kebijakan-privasi" target="_blank">Kebijakan Privasi</a>.
+                                    </p>
+                                </label>
+                            </div>
+                            <button type="button" class="btn btn-info btn-sm w-100" id="btn-daftar" disabled>Daftar</button>
+                        </form>
+                        <div class="d-flex align-items-center justify-content-center yuk-login-dulu mt-2">
+                            <img src="assets/secure.png" width="30">
+                            <b>Sudah Punya Akun?<a href="#" class="masukAkun"> Masuk</a></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Daftar via Google -->
+        <div class="modal fade" id="modalDaftarGoogle">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Daftar menggunakan akun Google</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-modal-daftar-google">
+                            <div class="form-check my-2">
+                                <input type="checkbox" class="form-check-input syarat_ketentuan_req" name="modal_google_syarat_ketentuan" required>
+                                <label class="form-check-label pl-0 ms-1">
+                                    <p style="margin-bottom: 0px">Saya setuju dengan
+                                        <a href="https://edukasa.id/informasi/20/syarat-dan-ketentuan" target="_blank">Syarat &amp; Ketentuan</a>
+                                        dan <a href="https://edukasa.id/informasi/21/kebijakan-privasi" target="_blank">Kebijakan Privasi</a>.
+                                    </p>
+                                </label>
+                            </div>
+                        </form>
+                        <a class="btn btn-info btn-sm w-100 google-signin disabled" id="btn-modal-daftar-google" href="https://edukasa.id/register/google" role="button" style="text-transform:none">
+                            Lanjut mendaftar dengan Google
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Masuk Utama -->
+        <div class="modal fade" id="modalMasuk">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Portal Login Edukasa.id</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body list-daftar d-flex flex-column align-items-center justify-content-center">
+                        <a class="btn btn-info btn-sm w-100 mb-2" id="btn-login-google" href="https://edukasa.id/login/google" role="button" style="text-transform:none">
+                            <div class="list-login-component-wrapper">
+                                <img width="30" alt="Masuk menggunakan google" src="assets/icon_google.png">
+                                <span>Masuk dengan Google</span>
+                            </div>
+                        </a>
+                        <a class="btn btn-info btn-sm w-100 mb-2" id="btn-login-email" href="#" role="button" style="text-transform:none">
+                            <div class="list-login-component-wrapper">
+                                <img width="30" alt="Masuk menggunakan email" src="assets/icon_email.png">
+                                <span>Masuk dengan Email</span>
+                            </div>
+                        </a>
+                        <div class="yuk-daftar-dulu mt-2">
+                            <img src="assets/secure.png" width="35">
+                            <b>Belum Punya Akun? Yuk<a href="#" class="daftarAkun"> Daftar</a> dulu!</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Masuk Email -->
+        <div class="modal fade" id="modalMasukEmail">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Portal Login Edukasa.id</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-masuk">
+                            <input type="text" class="form-control form-control-sm mb-2" id="email" name="email" placeholder="Email" required>
+                            <div class="input-group mb-2" id="show_hide_password_masuk">
+                                <input type="password" class="form-control form-control-sm border-right-white" id="password" name="password" placeholder="Password" required>
+                                <span class="input-group-text">
+                                    <a href="#" tabindex="-1"><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                                </span>
+                            </div>
+                            <a href="#" id="lupa-password" class="float-end text-end">lupa password?</a>
+                            <button type="button" id="btn-login" class="btn btn-info btn-sm w-100 mt-2">Masuk</button>
+                        </form>
+                        <div class="d-flex align-items-center justify-content-center yuk-daftar-dulu mt-2">
+                            <img src="assets/secure.png" width="35">
+                            <b>Belum Punya Akun? Yuk<a href="#" class="daftarAkun"> Daftar</a> dulu!</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal OTP -->
+        <div class="modal fade" id="modalOtp" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Konfirmasi Pendaftaran</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-success" role="alert">
+                            Kode Verifikasi telah dikirim ke alamat email anda.
+                        </div>
+                        <form id="form-konfirmasi-otp">
+                            <input type="text" class="form-control form-control-sm mb-2" id="otp" name="otp" placeholder="Masukkan 6 digit kode verifikasi" required>
+                            <span class="float-end text-end" style="font-size:12px">Belum menerima kode verifikasi?
+                                <br><a href="#" id="resend-otp" data-email="" class="float-end"> Kirim ulang kode verifikasi</a>
+                            </span>
+                            <button type="button" id="btn-konfirmasi-otp" class="btn btn-info btn-sm w-100 mt-2">Konfirmasi Pendaftaran</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Lupa Password -->
+        <div class="modal fade" id="modalLupaPassword" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <span>Lupa Password</span>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="form-lupa-password">
+                            <div class="alert alert-warning" role="alert">
+                                Silahkan masukkan email anda.
+                            </div>
+                            <input type="email" class="form-control form-control-sm mb-2" id="email-lupa-password" name="emailLupaPassword" placeholder="Email" required>
+                            <button type="button" id="btn-lupa-password" class="btn btn-info btn-sm w-100">Kirim Instruksi Lupa Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Ikuti juga update terbaru <br>melalui akun sosial media kami</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/edukasa.id" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/diklat-online" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@Edukasa-id" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://t.me/edukasaid" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+            <div class="hubungi-kami d-flex" id="hubungi-kami-content">
+                <div>
+                    <h6><i class="fa-regular fa-map"></i>&nbsp; Lokasi</h6>
+                    <span><b>PT Sumber Belajar Bersama</b></span><br>
+                    <span>Grogolan, Rejoslamet, <br>Kec. Mojowarno, Kabupaten Jombang, <br>Jawa Timur 61475</span>
+                </div>
+                <hr>
+                <div>
+                    <h6><i class="fa-solid fa-headset"></i>&nbsp; Kontak</h6>
+                    <span>Email : edukasa.id@gmail.com</span><br>
+                    <span>Phone : 085190851001</span>
+                </div>
+            </div>
+            <p class="copyright">Copyright 2022 &copy; Edukasa.id. All Right Reserved.</p>
+        </footer>
+
+        <!-- Bottom Navigation -->
+        <nav class="navbar navbar-expand fixed-bottom bottom-nav">
+            <div class="container">
+                <a class="nav-link active" href="index.html">
+                    <i class="fas fa-home"></i> Beranda
+                </a>
+                <a class="nav-link" href="https://edukasa.id/kelas-mandiri">
+                    <i class="fa-solid fa-tv"></i> Mandiri
+                </a>
+                <a class="nav-link" href="https://edukasa.id/kelas-live">
+                    <i class="fa-solid fa-wifi"></i> Live
+                </a>
+                <a class="nav-link" href="https://edukasa.id/bacaan">
+                    <i class="fa-regular fa-file-lines"></i> Bacaan
+                </a>
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#modalDaftar">
+                    <i class="fa-regular fa-user"></i> Daftar
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://api.whatsapp.com/send?phone=6285190851001" target="_blank" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="assets/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous" type="text/javascript"></script>
+    <script src="assets/bootstrap.bundle.min.js" type="text/javascript"></script>
+    <script src="assets/sweetalert2.min.js" type="text/javascript"></script>
+    <script src="assets/datepicker-ui-id.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        function applyDarkMode(isDarkMode) {
+            if (isDarkMode) {
+                $('body').css('background-color', 'rgb(0 0 0 / 80%)');
+                $('#darkModeToggle').prop('checked', true);
+            } else {
+                $('body').css('background-color', '#FAFAFA');
+                $('#darkModeToggle').prop('checked', false);
+            }
+        }
+        var isDarkMode = localStorage.getItem('darkMode') === 'true';
+        applyDarkMode(isDarkMode);
+        $('#darkModeToggle').on('change', function(event) {
+            var isDarkMode = $(this).is(':checked');
+            localStorage.setItem('darkMode', isDarkMode);
+            applyDarkMode(isDarkMode);
+        });
+    });
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var announcement = new bootstrap.Carousel(document.querySelector('#announcement'), {
+            interval: 8000
+        });
+
+        var hash = window.location.hash;
+        if (hash == '#jelajah-content') {
+            $('html, body').animate({
+                scrollTop: $("#text-jelajahi-program-pilihan").offset().top - 100
+            }, 500);
+        }
+
+        $('#modal-pengumuman').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var id = button.data('id');
+            var title = button.data('title');
+            var description = button.data('description');
+            var modal = $(this);
+            modal.find('.pengumuman-title span').text(title);
+            modal.find('.pengumuman-description p').html(description);
+        });
+
+        // Category filter
+        $('.category-buttons .nav-link').on('click', function(e) {
+            e.preventDefault();
+            let id = $(this).attr('href').substring(1);
+            $('#keyword-search').val('');
+            loadClasses(id);
+        });
+
+        // Search functionality
+        var timer;
+        $('#keyword-search').on('keyup', function(e) {
+            clearTimeout(timer);
+            timer = setTimeout(function() {
+                let categoryId = $('.category-buttons .nav-link.active').attr('href').substring(1);
+                let search = $('#keyword-search').val();
+                loadClasses(categoryId, search);
+            }, 500);
+        });
+
+        function loadClasses(category = 'all', search = '') {
+            $.ajax({
+                url: "https://edukasa.id/ajax-get-diklat",
+                type: "GET",
+                data: { category: category, search: search },
+                beforeSend: function() {
+                    $('#load-content').html('<div class="loading-container"><div class="spinner-border text-primary" role="status"></div><span class="ms-2"> Memuat Kelas...</span></div>');
+                },
+                success: function(response) {
+                    $('#load-content').html(response);
+                },
+                error: function(response) {
+                    console.error('Error loading classes:', response);
+                }
+            });
+        }
+
+        $('#load-content').on('click', '.page-link', function(e) {
+            e.preventDefault();
+            let url = $(this).attr('href');
+            $.ajax({
+                url: url,
+                type: "GET",
+                beforeSend: function() {
+                    $('#load-content').html('<div class="loading-container"><div class="spinner-border text-primary" role="status"></div><span class="ms-2"> Memuat Kelas...</span></div>');
+                },
+                success: function(response) {
+                    $('#load-content').html(response);
+                },
+                error: function(response) {
+                    console.error('Error loading paginated classes:', response);
+                }
+            });
+        });
+
+        $("#tanggalLahirDaftar").datepicker({
+            dateFormat: 'dd MM yy',
+            yearRange: "-80:+10",
+            changeMonth: true,
+            changeYear: true
+        });
+
+        $('#modalMasuk').on('show.bs.modal', function (e) {
+            $('#form-masuk').trigger('reset');
+        });
+
+        $('#modalDaftar').on('show.bs.modal', function (e) {
+            $('#form-daftar').trigger('reset');
+            if (window.location.href.indexOf("daftar=1") > -1) {
+                let currURL = window.location.href;
+                let afterDomain = currURL.substring(currURL.lastIndexOf('/') + 1);
+                let beforeQueryString = afterDomain.split("?")[0];
+                window.history.replaceState({}, document.title, "/" + beforeQueryString);
+            }
+        });
+
+        $('.daftarAkun').click(function(e) {
+            e.preventDefault();
+            $('#modalMasuk').modal('hide');
+            $('#modalMasukEmail').modal('hide');
+            $('#modalDaftar').modal('show');
+        });
+
+        $('#btn-daftar-email').click(function(e) {
+            e.preventDefault();
+            $('#modalDaftar').modal('hide');
+            $('#modalDaftarEmail').modal('show');
+        });
+
+        $('.masukAkun').click(function(e) {
+            e.preventDefault();
+            $('#modalDaftar').modal('hide');
+            $('#modalDaftarEmail').modal('hide');
+            $('#modalMasuk').modal('show');
+        });
+
+        $('#btn-login-email').click(function(e) {
+            e.preventDefault();
+            $('#modalMasuk').modal('hide');
+            $('#modalMasukEmail').modal('show');
+        });
+
+        $("#show_hide_password a").on('click', function(event) {
+            event.preventDefault();
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("fa-eye-slash");
+                $('#show_hide_password i').removeClass("fa-eye");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("fa-eye-slash");
+                $('#show_hide_password i').addClass("fa-eye");
+            }
+        });
+
+        $("#show_hide_password_masuk a").on('click', function(event) {
+            event.preventDefault();
+            if ($('#show_hide_password_masuk input').attr("type") == "text") {
+                $('#show_hide_password_masuk input').attr('type', 'password');
+                $('#show_hide_password_masuk i').addClass("fa-eye-slash");
+                $('#show_hide_password_masuk i').removeClass("fa-eye");
+            } else if ($('#show_hide_password_masuk input').attr("type") == "password") {
+                $('#show_hide_password_masuk input').attr('type', 'text');
+                $('#show_hide_password_masuk i').removeClass("fa-eye-slash");
+                $('#show_hide_password_masuk i').addClass("fa-eye");
+            }
+        });
+
+        $("#show_hide_confirm_password a").on('click', function(event) {
+            event.preventDefault();
+            if ($('#show_hide_confirm_password input').attr("type") == "text") {
+                $('#show_hide_confirm_password input').attr('type', 'password');
+                $('#show_hide_confirm_password i').addClass("fa-eye-slash");
+                $('#show_hide_confirm_password i').removeClass("fa-eye");
+            } else if ($('#show_hide_confirm_password input').attr("type") == "password") {
+                $('#show_hide_confirm_password input').attr('type', 'text');
+                $('#show_hide_confirm_password i').removeClass("fa-eye-slash");
+                $('#show_hide_confirm_password i').addClass("fa-eye");
+            }
+        });
+
+        $('#form-konfirmasi-otp').on("keyup keypress", function(e) { enterKey(); });
+        $('#form-lupa-password').on("keyup keypress", function(e) { enterKey(); });
+
+        function enterKey() {
+            var key = event.keyCode;
+            if (key == 13) {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        $('#lupa-password').click(function(e) {
+            e.preventDefault();
+            $('#modalMasukEmail').modal('hide');
+            $('#modalLupaPassword').modal('show');
+        });
+
+        $('#btn-lupa-password').click(function(e) {
+            e.preventDefault();
+            if (!$("#form-lupa-password")[0].checkValidity()) {
+                $("#form-lupa-password")[0].reportValidity();
+                return false;
+            }
+            let email = $('#email-lupa-password').val();
+            $('#btn-lupa-password').prop('disabled', true);
+            $('#btn-lupa-password').html('<i class="fa fa-spinner fa-spin"></i>');
+            let url = "https://edukasa.id/lupa-password/:email";
+            url = url.replace(':email', email);
+            $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+            $.ajax({
+                url: url, type: 'GET',
+                success: function(response) {
+                    if (response.status) { Swal.fire('Berhasil!', response.message, 'success'); }
+                    else { Swal.fire('Gagal!', response.message, 'error'); }
+                    $('#btn-lupa-password').prop('disabled', false).html('Kirim');
+                    $('#modalLupaPassword').modal('hide');
+                    $('#email-lupa-password').val('');
+                },
+                error: function() {
+                    Swal.fire('Gagal melakukan login', 'Terjadi kesalahan! Silahkan coba lagi', 'error');
+                    $('#btn-lupa-password').prop('disabled', false).html('Kirim');
+                }
+            });
+        });
+
+        $('#btn-login').click(function(e) {
+            e.preventDefault();
+            let email = $('#email').val();
+            let password = $('#password').val();
+            $('#btn-login').prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i>');
+            $('#btn-login-google').prop('disabled', true);
+            if (email == '' || password == '') {
+                Swal.fire('Oops!', 'Email dan Password tidak boleh kosong!', 'warning').then(function() {
+                    $('#btn-login').prop('disabled', false).html('Masuk');
+                    $('#btn-login-google').prop('disabled', false);
+                });
+            } else {
+                $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+                $.ajax({
+                    url: "https://edukasa.id/login", type: "POST",
+                    data: { email: email, password: password }, dataType: "json",
+                    success: function(response) {
+                        if (response.status) { window.location.href = "https://edukasa.id/member/welcome"; }
+                        else {
+                            Swal.fire('Gagal melakukan login', response.message, 'error');
+                            $('#btn-login').prop('disabled', false).html('Masuk');
+                            $('#btn-login-google').prop('disabled', false);
+                        }
+                    },
+                    error: function() {
+                        Swal.fire('Gagal melakukan login', 'Terjadi kesalahan! Coba lagi nanti.', 'error');
+                        $('#btn-login').prop('disabled', false).html('Masuk');
+                        $('#btn-login-google').prop('disabled', false);
+                    }
+                });
+            }
+        });
+
+        $('#btn-daftar-google').click(function(e) {
+            e.preventDefault();
+            $('#modalDaftarGoogle').modal('show');
+            $('#modalDaftar').modal('hide');
+        });
+
+        $('input[type="checkbox"][name="syarat_ketentuan"]').change(function() {
+            $('#btn-daftar').prop('disabled', !this.checked);
+        });
+
+        $('input[type="checkbox"][name="modal_google_syarat_ketentuan"]').change(function() {
+            if (this.checked) { $('#btn-modal-daftar-google').removeClass('disabled'); }
+            else { $('#btn-modal-daftar-google').addClass('disabled'); }
+        });
+
+        $('#btn-daftar').click(function(e) {
+            e.preventDefault();
+            if (!$("#form-daftar")[0].checkValidity()) { $("#form-daftar")[0].reportValidity(); return false; }
+            $('#btn-daftar').prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i>');
+            $('#btn-daftar-google').prop('disabled', true);
+            let dob = $.datepicker.formatDate("yy-mm-dd", $('#tanggalLahirDaftar').datepicker("getDate"));
+            let formData = new FormData($('#form-daftar')[0]);
+            formData.append('dob', dob);
+            $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+            $.ajax({
+                url: "https://edukasa.id/register/checkdata", type: "POST",
+                data: formData, processData: false, contentType: false,
+                success: function(response) {
+                    if (response.status) {
+                        $('#modalDaftarEmail').modal('hide');
+                        $('#modalOtp').modal('show');
+                        $('#resend-otp').attr('data-email', response.data);
+                    } else {
+                        if (response.is_email_already_registered) {
+                            Swal.fire({ title: 'Gagal melakukan pendaftaran', html: '<span>Email sudah terdaftar, silahkan pilih menu masuk</span>', icon: 'error' });
+                        } else {
+                            Swal.fire('Gagal melakukan pendaftaran', response.message, 'error');
+                        }
+                    }
+                    $('#btn-daftar').prop('disabled', false).html('Daftar');
+                    $('#btn-daftar-google').prop('disabled', false);
+                },
+                error: function() {
+                    Swal.fire('Gagal melakukan pendaftaran', 'Terjadi kesalahan! Silahkan coba lagi', 'error');
+                    $('#btn-daftar').prop('disabled', false).html('Daftar');
+                    $('#btn-daftar-google').prop('disabled', false);
+                }
+            });
+        });
+
+        $('#resend-otp').click(function(e) {
+            e.preventDefault();
+            $('#btn-konfirmasi-otp').prop('disabled', true);
+            $('#resend-otp').html('<i class="fa fa-spinner fa-spin"></i>').addClass('disabled');
+            let email = $(this).attr('data-email');
+            let url = "https://edukasa.id/verify/resend/:email";
+            url = url.replace(':email', email);
+            $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+            $.ajax({
+                url: url, type: "GET", data: { email: email },
+                success: function(response) {
+                    if (response.status) {
+                        Swal.fire('Berhasil!', response.message, 'success').then(function() {
+                            let counter = response.data;
+                            let interval = setInterval(function() {
+                                counter--;
+                                $('#resend-otp').html('<i class="fa fa-spinner fa-spin"></i> Tunggu ' + counter + ' detik lagi untuk mengirim ulang kode verifikasi.');
+                                if (counter == 0) {
+                                    clearInterval(interval);
+                                    $('#resend-otp').html(' Kirim ulang kode verifikasi').removeClass('disabled');
+                                }
+                            }, 1000);
+                        });
+                    } else {
+                        Swal.fire('Gagal!', response.message, 'error').then(function() {
+                            $('#resend-otp').html(' Kirim ulang kode verifikasi').removeClass('disabled');
+                        });
+                    }
+                    $('#btn-konfirmasi-otp').prop('disabled', false);
+                },
+                error: function() {
+                    Swal.fire('Gagal mengirim kode verifikasi', 'Terjadi kesalahan! Silahkan coba lagi', 'error');
+                    $('#btn-konfirmasi-otp').prop('disabled', false);
+                    $('#resend-otp').html(' Kirim ulang kode verifikasi').removeClass('disabled');
+                }
+            });
+        });
+
+        $('#btn-konfirmasi-otp').click(function(e) {
+            e.preventDefault();
+            if (!$("#form-konfirmasi-otp")[0].checkValidity()) { $("#form-konfirmasi-otp")[0].reportValidity(); return false; }
+            $('#btn-konfirmasi-otp').prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i>');
+            let dob = $.datepicker.formatDate("yy-mm-dd", $('#tanggalLahirDaftar').datepicker("getDate"));
+            let formData = new FormData($('#form-daftar')[0]);
+            formData.append('dob', dob);
+            formData.append('otp', $('#otp').val());
+            $.ajaxSetup({ headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') } });
+            $.ajax({
+                url: "https://edukasa.id/verify", type: "POST",
+                data: formData, processData: false, contentType: false,
+                success: function(response) {
+                    if (response.status) {
+                        $('#modalOtp').modal('hide');
+                        Swal.fire('Berhasil!', response.message, 'success').then((result) => {
+                            if (result.value) { window.location.href = "https://edukasa.id/member/welcome"; }
+                        });
+                    } else {
+                        Swal.fire('Gagal melakukan verifikasi', response.message, 'error');
+                    }
+                    $('#btn-konfirmasi-otp').prop('disabled', false).html('Konfirmasi Pendaftaran');
+                },
+                error: function() {
+                    Swal.fire('Gagal melakukan verifikasi', 'Terjadi kesalahan! Silahkan coba lagi', 'error');
+                    $('#btn-konfirmasi-otp').prop('disabled', false).html('Konfirmasi Pendaftaran');
+                }
+            });
+        });
+    });
+    </script>
+
+    <div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+</body>
+</html>

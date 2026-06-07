@@ -80,57 +80,32 @@
     <script src="../assets/jquery-3.6.0.min.js"></script>
     <script src="../assets/bootstrap.bundle.min.js"></script>
     <script src="../assets/sweetalert2.min.js"></script>
+    <!-- Database sertifikat — satu sumber kebenaran -->
+    <script src="../assets/db.js"></script>
 
     <script>
-    // ============================================================
-    // DATABASE SERTIFIKAT (hardcoded)
-    // ============================================================
-    var DB = {
-        "01.026/DO-UPDME-SER/IV/2026/LRCKG6742": {
-            hash: "120697b1e6807dc01769676392WZ6SF6742",
-            noSertifikat: "01.026/DO-UPDME-SER/IV/2026/LRCKG6742",
-            kelas: "Pelatihan Nasional Penulisan Publikasi Ilmiah dan Manajemen Data untuk Pemula",
-            kelasUrl: "https://edukasa.id/kelas-live/120/pelatihan-nasional-penulisan-publikasi-ilmiah-dan-manajemen-data-untuk-pemula",
-            nama: "Muhammad Awal Nur, M.Pd",
-            nip: "198810242023211011",
-            nuptk: "-",
-            nidn: "0924108802",
-            instansi: "Universitas Negeri Makassar"
-        },
-        "13.003/ED-NSPPA/II/2026/XEA4U765": {
-            hash: "121699fae3cd41161772072508AJW7Y765",
-            noSertifikat: "13.003/ED-NSPPA/II/2026/XEA4U765",
-            kelas: "Pelatihan Nasional Pengenalan dan Pemanfaatan Artificial Intelligence (AI) di Era Digital",
-            kelasUrl: "https://edukasa.id/kelas-live/121/pelatihan-nasional-pengenalan-dan-pemanfaatan-artificial-intelligence-ai-di-era-digital",
-            nama: "Muhammad Awal Nur, M.Pd",
-            nip: "198810242023211011",
-            nuptk: "-",
-            nidn: "0924108802",
-            instansi: "UNM"
-        },
-        "13.003/ED-NSPAK/IV/2026/YL0T910140": {
-            hash: "12269d79d89eae121775738249ZYDCV10140",
-            noSertifikat: "13.003/ED-NSPAK/IV/2026/YL0T910140",
-            kelas: "Pelatihan Nasional Teknik Prompt AI untuk Mendukung Pekerjaan Harian: Penulisan, Analisis dan Kreativitas",
-            kelasUrl: "https://edukasa.id/kelas-live/122/pelatihan-nasional-pengenalan-dan-pemanfaatan-artificial-intelligence-ai-di-era-digital1773013927gt1se",
-            nama: "Muhammad Awal Nur, M.Pd",
-            nip: "-",
-            nuptk: "-",
-            nidn: "0924108802",
-            instansi: "Universitas Negeri Makassar"
+    // Cek apakah ada data baru di localStorage (ditambah via /admin)
+    // Jika ada, override DB_BY_NOMOR dan DB_BY_ID dengan data terbaru
+    (function() {
+        var saved = localStorage.getItem('edukasa_sertifikat_db');
+        if (saved) {
+            try {
+                var data = JSON.parse(saved);
+                DB_BY_NOMOR = {};
+                DB_BY_ID    = {};
+                data.forEach(function(s) {
+                    DB_BY_NOMOR[s.noSertifikat] = s;
+                    DB_BY_ID[s.id]              = s;
+                });
+            } catch(e) {}
         }
-    };
-
-    // Mapping hash -> nomor sertifikat (untuk lookup via URL path)
-    var DB_BY_HASH = {};
-    Object.keys(DB).forEach(function(no) {
-        DB_BY_HASH[DB[no].hash] = DB[no];
-    });
+    })();
 
     // ============================================================
     // RENDER HASIL SERTIFIKAT
     // ============================================================
     function renderHasil(data) {
+        var hash = data.id || data.hash;
         return `
         <div class="cari-sertifikat-content">
             <div class="row">
@@ -177,14 +152,14 @@
             <div class="unduh-sertifikat row">
                 <div class="col-6">
                     <a class="btn btn-outline-success w-100"
-                       href="https://edukasa.id/sertifikat/${data.hash}" target="_blank">
+                       href="https://edukasa.id/sertifikat/${hash}" target="_blank">
                         <span>Unduh Sertifikat <i class="fa-solid fa-award ms-1"></i></span><br>
                         <small style="font-size:0.75rem;opacity:0.9;">(Tanpa Nilai)</small>
                     </a>
                 </div>
                 <div class="col-6">
                     <a class="btn btn-outline-primary w-100"
-                       href="https://edukasa.id/sertifikat/${data.hash}/with-score" target="_blank">
+                       href="https://edukasa.id/sertifikat/${hash}/with-score" target="_blank">
                         <span>Unduh Sertifikat <i class="fa-solid fa-award ms-1"></i></span><br>
                         <small style="font-size:0.75rem;opacity:0.9;">(Tampilkan Nilai)</small>
                     </a>
@@ -203,20 +178,17 @@
     }
 
     // ============================================================
-    // CEK URL PATH — jika /verifikasi-sertifikat/<hash>, tampilkan langsung
+    // CEK URL PATH — jika /verifikasi-sertifikat/<id>, tampilkan langsung
     // ============================================================
     $(document).ready(function() {
         var path = window.location.pathname;
-        // Ambil segment terakhir setelah /verifikasi-sertifikat/
         var segments = path.replace(/\/$/, '').split('/');
-        var hash = segments[segments.length - 1];
+        var id = segments[segments.length - 1];
 
-        // Kalau ada hash di URL (bukan "verifikasi-sertifikat" itu sendiri)
-        if (hash && hash !== 'verifikasi-sertifikat' && DB_BY_HASH[hash]) {
-            var data = DB_BY_HASH[hash];
-            // Isi kolom pencarian dengan nomor sertifikat
+        // Kalau ada ID di URL, lookup langsung dari DB_BY_ID
+        if (id && id !== 'verifikasi-sertifikat' && DB_BY_ID[id]) {
+            var data = DB_BY_ID[id];
             $('#keyword-search').val(data.noSertifikat);
-            // Tampilkan hasil langsung
             $('#load-content').html(renderHasil(data));
         }
 
@@ -235,10 +207,9 @@
             );
 
             setTimeout(function() {
-                var data = DB[nomor];
+                var data = DB_BY_NOMOR[nomor];
                 if (data) {
-                    // Update URL ke clean URL tanpa reload halaman
-                    history.pushState(null, '', '/verifikasi-sertifikat/' + data.hash);
+                    history.pushState(null, '', '/verifikasi-sertifikat/' + data.id);
                     $('#load-content').html(renderHasil(data));
                 } else {
                     history.pushState(null, '', '/verifikasi-sertifikat');

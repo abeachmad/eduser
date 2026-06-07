@@ -15,6 +15,7 @@ DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 ROUTES = {
     "/":                        "index.html",
     "/verifikasi-sertifikat":   "verifikasi-sertifikat/index.html",
+    "/admin":                   "admin/index.html",
 }
 
 # Semua sub-path di bawah /verifikasi-sertifikat/ dilayani dari folder yang sama

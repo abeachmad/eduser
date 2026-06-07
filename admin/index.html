@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Kelola Sertifikat Edukasa.id</title>
+    <link href="../assets/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/all.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8f9fa; }
+        .admin-header { background: #0dcaf0; color: white; padding: 16px 24px; margin-bottom: 24px; }
+        .admin-header h4 { margin: 0; font-weight: 700; }
+        .admin-header small { opacity: 0.85; }
+        .card { border: none; box-shadow: 0 1px 4px rgba(0,0,0,0.1); border-radius: 10px; }
+        .card-header { background: #fff; border-bottom: 2px solid #0dcaf0; font-weight: 600; border-radius: 10px 10px 0 0 !important; }
+        .table th { background: #f0fdff; font-size: 0.8rem; text-transform: uppercase; color: #666; }
+        .table td { font-size: 0.88rem; vertical-align: middle; }
+        .id-badge { font-family: monospace; font-size: 0.72rem; background: #e9f7fe; color: #0a7a96; padding: 2px 6px; border-radius: 4px; word-break: break-all; }
+        .no-sertifikat { font-family: monospace; font-size: 0.82rem; font-weight: 600; }
+        .btn-copy { font-size: 0.75rem; padding: 1px 6px; }
+        #generated-id { font-family: monospace; font-size: 1rem; font-weight: 700; background: #e9f7fe; padding: 10px 16px; border-radius: 8px; color: #0a7a96; letter-spacing: 0.5px; word-break: break-all; }
+        .form-label { font-weight: 600; font-size: 0.88rem; }
+        #toast-container { position: fixed; bottom: 24px; right: 24px; z-index: 9999; }
+    </style>
+</head>
+<body>
+
+<div class="admin-header">
+    <div class="container-fluid">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h4><i class="fas fa-shield-alt me-2"></i>Admin Sertifikat</h4>
+                <small>Edukasa.id &mdash; Kelola data sertifikat peserta</small>
+            </div>
+            <a href="/" class="btn btn-light btn-sm"><i class="fas fa-home me-1"></i>Kembali ke Website</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid px-4">
+
+    <!-- FORM TAMBAH DATA -->
+    <div class="card mb-4">
+        <div class="card-header py-3">
+            <i class="fas fa-plus-circle text-info me-2"></i>Tambah Data Sertifikat Baru
+        </div>
+        <div class="card-body">
+            <form id="form-tambah">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">No. Sertifikat <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" id="f-no" placeholder="01.026/DO-UPDME-SER/IV/2026/LRCKG0000" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Nama Peserta <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" id="f-nama" placeholder="Nama Lengkap, Gelar" required>
+                    </div>
+                    <div class="col-md-8">
+                        <label class="form-label">Nama Kelas <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" id="f-kelas" placeholder="Pelatihan Nasional ..." required>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="form-label">URL Kelas</label>
+                        <input type="text" class="form-control form-control-sm" id="f-kelas-url" placeholder="https://edukasa.id/kelas-live/...">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">NIP / NIPPK</label>
+                        <input type="text" class="form-control form-control-sm" id="f-nip" placeholder="- (jika tidak ada)">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">NUPTK</label>
+                        <input type="text" class="form-control form-control-sm" id="f-nuptk" placeholder="- (jika tidak ada)">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">NIDN</label>
+                        <input type="text" class="form-control form-control-sm" id="f-nidn" placeholder="- (jika tidak ada)">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Instansi <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control form-control-sm" id="f-instansi" placeholder="Universitas Negeri Makassar" required>
+                    </div>
+
+                    <!-- Generated ID Preview -->
+                    <div class="col-12">
+                        <label class="form-label">ID Sertifikat (auto-generated)</label>
+                        <div class="d-flex align-items-center gap-2">
+                            <div id="generated-id">—</div>
+                            <button type="button" class="btn btn-outline-secondary btn-sm" id="btn-regen" title="Generate ulang ID">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                            <button type="button" class="btn btn-outline-info btn-sm" id="btn-copy-id">
+                                <i class="fas fa-copy me-1"></i>Salin ID
+                            </button>
+                        </div>
+                        <small class="text-muted">ID 35 karakter ini akan menjadi URL sertifikat: <code>/verifikasi-sertifikat/<span id="id-preview-url">...</span></code></small>
+                    </div>
+                </div>
+
+                <div class="mt-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-info text-white px-4">
+                        <i class="fas fa-save me-2"></i>Simpan Data
+                    </button>
+                    <button type="button" class="btn btn-outline-secondary" id="btn-reset">
+                        <i class="fas fa-times me-1"></i>Reset Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TABEL DATA SERTIFIKAT -->
+    <div class="card mb-5">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <span><i class="fas fa-table text-info me-2"></i>Daftar Sertifikat (<span id="total-data">0</span> data)</span>
+            <div class="d-flex gap-2">
+                <input type="text" id="tbl-search" class="form-control form-control-sm" placeholder="Cari nama / no. sertifikat..." style="width:240px">
+                <button class="btn btn-outline-success btn-sm" id="btn-export">
+                    <i class="fas fa-download me-1"></i>Export db.js
+                </button>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover mb-0" id="tbl-sertifikat">
+                    <thead>
+                        <tr>
+                            <th class="ps-3">#</th>
+                            <th>No. Sertifikat</th>
+                            <th>Nama</th>
+                            <th>Instansi</th>
+                            <th>Kelas</th>
+                            <th>ID</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast -->
+<div id="toast-container"></div>
+
+<script src="../assets/jquery-3.6.0.min.js"></script>
+<script src="../assets/bootstrap.bundle.min.js"></script>
+<script src="../assets/db.js"></script>
+<script>
+
+// ============================================================
+// STATE — load dari db.js, lalu overlay dengan localStorage
+// ============================================================
+var localKey = 'edukasa_sertifikat_db';
+
+function loadData() {
+    var saved = localStorage.getItem(localKey);
+    if (saved) {
+        try { return JSON.parse(saved); } catch(e) {}
+    }
+    // Pertama kali: pakai data dari db.js
+    return JSON.parse(JSON.stringify(SERTIFIKAT_DATA));
+}
+
+function saveData(data) {
+    localStorage.setItem(localKey, JSON.stringify(data));
+    // Rebuild lookup index di db.js runtime
+    DB_BY_NOMOR = {};
+    DB_BY_ID    = {};
+    data.forEach(function(s) {
+        DB_BY_NOMOR[s.noSertifikat] = s;
+        DB_BY_ID[s.id]              = s;
+    });
+}
+
+var DATA = loadData();
+saveData(DATA); // sync index
+
+// ============================================================
+// GENERATE ID 35 KARAKTER
+// Format mirip asli: angka-timestamp + hex random + HURUF BESAR + angka
+// ============================================================
+function generateID() {
+    var ts  = Date.now().toString(); // 13 digit
+    var hex = '';
+    for (var i = 0; i < 13; i++) hex += Math.floor(Math.random()*16).toString(16);
+    var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var digits = '0123456789';
+    var suffix = '';
+    for (var i = 0; i < 3; i++) suffix += upper[Math.floor(Math.random()*26)];
+    suffix += digits[Math.floor(Math.random()*10)];
+    for (var i = 0; i < 2; i++) suffix += upper[Math.floor(Math.random()*26)];
+    suffix += digits[Math.floor(Math.random()*10000).toString().padStart(4,'0').substring(0,4)];
+    var raw = ts + hex + suffix;
+    return raw.substring(0, 35);
+}
+
+// ============================================================
+// UI — Generate ID otomatis saat form diisi
+// ============================================================
+var currentID = generateID();
+
+function refreshIDDisplay() {
+    $('#generated-id').text(currentID);
+    $('#id-preview-url').text(currentID);
+}
+refreshIDDisplay();
+
+$('#btn-regen').click(function() {
+    currentID = generateID();
+    refreshIDDisplay();
+    toast('ID baru di-generate', 'info');
+});
+
+$('#btn-copy-id').click(function() {
+    navigator.clipboard.writeText(currentID).then(function() {
+        toast('ID berhasil disalin!', 'success');
+    });
+});
+
+// ============================================================
+// FORM SUBMIT
+// ============================================================
+$('#form-tambah').on('submit', function(e) {
+    e.preventDefault();
+
+    var noSertifikat = $('#f-no').val().trim();
+
+    // Cek duplikat
+    if (DB_BY_NOMOR[noSertifikat]) {
+        toast('No. sertifikat sudah ada dalam database!', 'danger');
+        return;
+    }
+
+    var entry = {
+        id:           currentID,
+        noSertifikat: noSertifikat,
+        kelas:        $('#f-kelas').val().trim(),
+        kelasUrl:     $('#f-kelas-url').val().trim() || '#',
+        nama:         $('#f-nama').val().trim(),
+        nip:          $('#f-nip').val().trim()  || '-',
+        nuptk:        $('#f-nuptk').val().trim()|| '-',
+        nidn:         $('#f-nidn').val().trim() || '-',
+        instansi:     $('#f-instansi').val().trim()
+    };
+
+    DATA.push(entry);
+    saveData(DATA);
+    renderTable(DATA);
+
+    toast('Data sertifikat berhasil ditambahkan! ID: ' + currentID, 'success');
+
+    // Reset form & generate ID baru
+    this.reset();
+    currentID = generateID();
+    refreshIDDisplay();
+});
+
+$('#btn-reset').click(function() {
+    $('#form-tambah')[0].reset();
+    currentID = generateID();
+    refreshIDDisplay();
+});
+
+// ============================================================
+// TABEL
+// ============================================================
+function renderTable(data) {
+    $('#total-data').text(data.length);
+    var html = '';
+    if (data.length === 0) {
+        html = '<tr><td colspan="7" class="text-center text-muted py-4">Belum ada data</td></tr>';
+    } else {
+        data.forEach(function(s, i) {
+            var shortKelas = s.kelas.length > 50 ? s.kelas.substring(0, 50) + '...' : s.kelas;
+            html += `
+            <tr>
+                <td class="ps-3 text-muted">${i+1}</td>
+                <td><span class="no-sertifikat">${s.noSertifikat}</span></td>
+                <td><strong>${s.nama}</strong></td>
+                <td>${s.instansi}</td>
+                <td title="${s.kelas}"><small>${shortKelas}</small></td>
+                <td>
+                    <span class="id-badge">${s.id}</span><br>
+                    <a href="/verifikasi-sertifikat/${s.id}" target="_blank" class="btn btn-outline-info btn-copy mt-1">
+                        <i class="fas fa-external-link-alt"></i> Buka
+                    </a>
+                </td>
+                <td>
+                    <button class="btn btn-outline-danger btn-sm btn-hapus" data-id="${s.id}">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </td>
+            </tr>`;
+        });
+    }
+    $('#tbl-body').html(html);
+}
+
+// Hapus data
+$(document).on('click', '.btn-hapus', function() {
+    var id = $(this).data('id');
+    var entry = DB_BY_ID[id];
+    if (!entry) return;
+    if (!confirm('Hapus sertifikat ' + entry.noSertifikat + ' (' + entry.nama + ')?')) return;
+    DATA = DATA.filter(function(s) { return s.id !== id; });
+    saveData(DATA);
+    renderTable(DATA);
+    toast('Data dihapus', 'warning');
+});
+
+// Search tabel
+$('#tbl-search').on('input', function() {
+    var q = $(this).val().toLowerCase();
+    var filtered = DATA.filter(function(s) {
+        return s.noSertifikat.toLowerCase().includes(q) ||
+               s.nama.toLowerCase().includes(q) ||
+               s.instansi.toLowerCase().includes(q);
+    });
+    renderTable(filtered);
+});
+
+// ============================================================
+// EXPORT db.js
+// ============================================================
+$('#btn-export').click(function() {
+    var lines = [];
+    lines.push('// ============================================================');
+    lines.push('// EDUKASA.ID - DATABASE SERTIFIKAT');
+    lines.push('// Auto-generated dari halaman Admin');
+    lines.push('// Terakhir diupdate: ' + new Date().toLocaleString('id-ID'));
+    lines.push('// ============================================================');
+    lines.push('');
+    lines.push('function generateID() {');
+    lines.push('    var ts = Date.now().toString();');
+    lines.push('    var chars = "abcdefghijklmnopqrstuvwxyz0123456789";');
+    lines.push('    var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";');
+    lines.push('    var mid = "";');
+    lines.push('    for (var i = 0; i < 16; i++) mid += chars[Math.floor(Math.random() * chars.length)];');
+    lines.push('    var suffix = "";');
+    lines.push('    for (var i = 0; i < 6; i++) suffix += upper[Math.floor(Math.random() * upper.length)];');
+    lines.push('    return (ts + mid + suffix).substring(0, 35);');
+    lines.push('}');
+    lines.push('');
+    lines.push('var SERTIFIKAT_DATA = ' + JSON.stringify(DATA, null, 4) + ';');
+    lines.push('');
+    lines.push('var DB_BY_NOMOR = {};');
+    lines.push('var DB_BY_ID    = {};');
+    lines.push('SERTIFIKAT_DATA.forEach(function(s) {');
+    lines.push('    DB_BY_NOMOR[s.noSertifikat] = s;');
+    lines.push('    DB_BY_ID[s.id]              = s;');
+    lines.push('});');
+
+    var blob = new Blob([lines.join('\n')], { type: 'application/javascript' });
+    var url  = URL.createObjectURL(blob);
+    var a    = document.createElement('a');
+    a.href     = url;
+    a.download = 'db.js';
+    a.click();
+    URL.revokeObjectURL(url);
+    toast('db.js berhasil di-export! Ganti file assets/db.js dengan file ini.', 'success');
+});
+
+// ============================================================
+// TOAST HELPER
+// ============================================================
+function toast(msg, type) {
+    type = type || 'info';
+    var icons = { success: 'check-circle', danger: 'exclamation-circle', warning: 'exclamation-triangle', info: 'info-circle' };
+    var id = 'toast-' + Date.now();
+    var html = `
+    <div id="${id}" class="toast align-items-center text-bg-${type} border-0 mb-2" role="alert" style="min-width:280px">
+        <div class="d-flex">
+            <div class="toast-body"><i class="fas fa-${icons[type]} me-2"></i>${msg}</div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+        </div>
+    </div>`;
+    $('#toast-container').append(html);
+    var el = new bootstrap.Toast(document.getElementById(id), { delay: 4000 });
+    el.show();
+    document.getElementById(id).addEventListener('hidden.bs.toast', function() { $(this).remove(); });
+}
+
+// ============================================================
+// INIT
+// ============================================================
+renderTable(DATA);
+</script>
+</body>
+</html>

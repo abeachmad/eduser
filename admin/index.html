@@ -114,7 +114,7 @@
             <span><i class="fas fa-table text-info me-2"></i>Daftar Sertifikat (<span id="total-data">0</span> data)</span>
             <div class="d-flex gap-2">
                 <input type="text" id="tbl-search" class="form-control form-control-sm" placeholder="Cari nama / no. sertifikat..." style="width:240px">
-                <button class="btn btn-outline-success btn-sm" id="btn-export">
+                <button class="btn btn-outline-success btn-sm d-none" id="btn-export">
                     <i class="fas fa-download me-1"></i>Export db.js
                 </button>
             </div>
@@ -162,14 +162,32 @@ function loadData() {
     return JSON.parse(JSON.stringify(SERTIFIKAT_DATA));
 }
 
-function saveData(data) {
+function saveData(data, showToast) {
+    // 1. Simpan ke localStorage (untuk session ini)
     localStorage.setItem(localKey, JSON.stringify(data));
-    // Rebuild lookup index di db.js runtime
+
+    // 2. Rebuild lookup index runtime
     DB_BY_NOMOR = {};
     DB_BY_ID    = {};
     data.forEach(function(s) {
         DB_BY_NOMOR[s.noSertifikat] = s;
         DB_BY_ID[s.id]              = s;
+    });
+
+    // 3. Auto-save langsung ke assets/db.js via server API
+    $.ajax({
+        url: '/api/save-db',
+        type: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify(data),
+        success: function(res) {
+            if (showToast !== false) {
+                toast('Data tersimpan permanen ke db.js (' + res.total + ' sertifikat)', 'success');
+            }
+        },
+        error: function() {
+            toast('Tersimpan di sesi ini, tapi gagal menulis db.js. Pastikan server.py berjalan.', 'warning');
+        }
     });
 }
 
@@ -304,7 +322,7 @@ $(document).on('click', '.btn-hapus', function() {
     if (!entry) return;
     if (!confirm('Hapus sertifikat ' + entry.noSertifikat + ' (' + entry.nama + ')?')) return;
     DATA = DATA.filter(function(s) { return s.id !== id; });
-    saveData(DATA);
+    saveData(DATA, false);
     renderTable(DATA);
     toast('Data dihapus', 'warning');
 });

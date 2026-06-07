@@ -10,7 +10,7 @@ import os
 import json
 import urllib.parse
 
-PORT = 8080
+PORT = int(os.environ.get("PORT", 8080))
 DIRECTORY = os.path.dirname(os.path.abspath(__file__))
 DB_FILE = os.path.join(DIRECTORY, "assets", "db.js")
 
@@ -134,7 +134,7 @@ class CleanURLHandler(http.server.SimpleHTTPRequestHandler):
 
 
 if __name__ == "__main__":
-    with http.server.HTTPServer(("", PORT), CleanURLHandler) as httpd:
+    with http.server.HTTPServer(("0.0.0.0", PORT), CleanURLHandler) as httpd:
         print(f"")
         print(f"  Edukasa.id Local Server")
         print(f"  http://localhost:{PORT}")
